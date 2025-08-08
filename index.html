@@ -5,19 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Thom Truax — Writer • Performer</title>
   <meta name="description" content="Thom Truax — writer • performer" />
-
-  <!-- Fonts: Bodoni Moda for name (Old Hollywood), Libre Baskerville for text -->
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,700;6..96,800&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
-
   <style>
     :root {
-      --ivory: #f6efe5;           /* parchment box */
-      --ink: #201a18;             /* body text */
-      --gold: #b38b59;            /* accent underline */
+      --ivory: #f6efe5;
+      --ink: #201a18;
+      --gold: #b38b59;
       --shadow: rgba(0, 0, 0, 0.25);
       --maxw: 980px;
     }
-
     * { box-sizing: border-box; }
     html, body { height: 100%; }
     body {
@@ -28,7 +24,6 @@
       background: #0e1215;
       overflow-x: hidden;
     }
-
     .hero {
       position: relative;
       min-height: 68vh;
@@ -38,18 +33,16 @@
       padding: 8rem 1.25rem 6rem;
       isolation: isolate;
     }
-
     .hero::before {
       content: "";
       position: absolute; inset: 0;
       background:
         linear-gradient(180deg, rgba(12,14,16,0.1) 0%, rgba(12,14,16,0.55) 60%, #0e0f11 100%),
-        url('images/hero.jpg') center / cover no-repeat;
+        url('https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e') center / cover no-repeat;
       filter: grayscale(20%) blur(1px) saturate(90%);
       opacity: 0.85;
       z-index: -2;
     }
-
     .hero::after {
       content: "";
       position: absolute; inset: 0;
@@ -59,7 +52,6 @@
       z-index: -1;
       pointer-events: none;
     }
-
     .grain {
       position: fixed; inset: 0; pointer-events: none; z-index: 9999;
       mix-blend-mode: multiply;
@@ -81,7 +73,6 @@
       90% { transform: translate(-1%, 0); }
       100% { transform: translate(0,0); }
     }
-
     .name {
       font-family: "Bodoni Moda", serif;
       font-weight: 800;
@@ -91,16 +82,13 @@
       text-shadow: 0 2px 20px rgba(0,0,0,0.45);
       margin: 0 0 0.75rem;
     }
-
     .tagline {
       color: rgba(245,245,245,0.9);
       letter-spacing: 0.25em;
       text-transform: lowercase;
       font-size: 0.95rem;
     }
-
     .wrap { display: grid; place-items: center; }
-
     .about-card {
       max-width: var(--maxw);
       background: var(--ivory);
@@ -111,25 +99,21 @@
       position: relative;
       border: 1px solid rgba(0,0,0,0.08);
     }
-
     .about-card::before, .about-card::after {
       content: ""; position: absolute; width: 46px; height: 46px;
       border: 2px solid rgba(0,0,0,0.07); border-radius: 8px;
       top: 14px; left: 14px; pointer-events: none;
     }
     .about-card::after { top: auto; left: auto; right: 14px; bottom: 14px; }
-
     .section-title {
       letter-spacing: 0.2em;
       font-weight: 700; font-size: 0.9rem; color: #a77a45;
       text-transform: uppercase; margin: 0 0 0.75rem;
     }
-
     .dropcap {
       font-family: "Bodoni Moda", serif; font-weight: 800; font-size: 3.1rem; line-height: 0.85; float: left; margin: 0.15rem 0.6rem 0 0; color: #a8713c;
       text-shadow: 0 1px 0 rgba(255,255,255,0.35);
     }
-
     .about-card .hover-underline { position: relative; display: inline-block; }
     .about-card .hover-underline::after {
       content: ""; position: absolute; left: 0; right: 100%; bottom: -4px; height: 2px; background: var(--gold);
@@ -137,10 +121,8 @@
       transition: right 420ms steps(10);
     }
     .about-card:hover .hover-underline::after { right: 0; }
-
     .about-card { transition: filter 160ms ease, transform 160ms ease; }
     .about-card:hover { animation: flicker 1200ms steps(8) 1, jitter 180ms ease-in-out 1; }
-
     @keyframes flicker {
       0% { filter: brightness(1) contrast(1); }
       10% { filter: brightness(1.02) contrast(1.05); }
@@ -155,14 +137,11 @@
       100% { filter: brightness(1) contrast(1); }
     }
     @keyframes jitter { from { transform: translateY(0); } 50% { transform: translateY(-0.5px); } to { transform: translateY(0); } }
-
     a { color: #5e3e1a; text-underline-offset: 3px; }
     a:hover { color: #8a6132; }
-
     footer { color: #b8b2ac; text-align: center; padding: 2rem 1rem 3rem; font-size: 0.85rem; }
   </style>
 </head>
-
 <body>
   <svg width="0" height="0" style="position:absolute">
     <filter id="grain">
@@ -174,28 +153,23 @@
     </filter>
   </svg>
   <div class="grain" aria-hidden="true"></div>
-
   <header class="hero">
     <div>
       <h1 class="name">THOM TRUAX</h1>
       <div class="tagline">writer • performer</div>
     </div>
   </header>
-
   <main class="wrap">
     <section class="about-card" aria-labelledby="about-title">
       <h2 id="about-title" class="section-title"><span class="hover-underline">About</span></h2>
       <p><span class="dropcap">T</span>hom Truax is a writer‑performer. He is currently developing the horror‑comedy feature <em>Slay of the Dead Vol. 1</em> for producer Michael Showalter, with Trixie Mattel and Katya set to star. On the television side, his pilot <em>Child of God</em> was a semi‑finalist in the ScreenCraft Screenwriting Fellowship 2023. A graduate of USC’s Writing for Film & Television program, his short film <em>Sorry, I Can’t Talk Right Now</em> premiered at Outfest 2022.</p>
-
       <h2 class="section-title" style="margin-top:1.75rem"><span class="hover-underline">Contact</span></h2>
       <p><a href="mailto:info@independentartistsmedia.com">Independent Artists Media</a></p>
     </section>
   </main>
-
   <footer>
     © <span id="year"></span> Thom Truax
   </footer>
-
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
