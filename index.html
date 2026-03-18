@@ -3,51 +3,121 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Thom Truax — Writer • Performer • Philosopher </title>
+  <title>Thom Truax — Writer • Performer • Philosopher</title>
   <meta name="description" content="Thom Truax — writer • performer" />
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,700;6..96,800&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --ivory:#f6efe5; --ink:#201a18; --gold:#b38b59; --shadow:rgba(0,0,0,.22);
-      --icon:#89aafc; --iconHover:#6b8ff8; --bg:#0e1215;
+      --ivory: #f6efe5;
+      --ink: #201a18;
+      --gold: #b38b59;
+      --shadow: rgba(0,0,0,.22);
+      --icon: #89aafc;
+      --iconHover: #6b8ff8;
+      --bg: #0e1215;
     }
-    * { box-sizing:border-box; }
-    html,body { height:100%; }
-    body { margin:0; font-family:"Libre Baskerville",serif; color:var(--ink); background:var(--bg); }
-    a { color:#5e3e1a; text-underline-offset:3px; }
-    a:hover { color:#8a6132; }
 
-    /* Fixed top-right icons */
-    .social-fixed {
-      position: fixed; top: 14px; right: 16px; display:flex; gap:12px; z-index: 10000;
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+
+    body {
+      margin: 0;
+      font-family: "Libre Baskerville", serif;
+      color: var(--ink);
+      background: var(--bg);
     }
+
+    a {
+      color: #5e3e1a;
+      text-underline-offset: 3px;
+    }
+
+    a:hover {
+      color: #8a6132;
+    }
+
+    .social-fixed {
+      position: fixed;
+      top: 14px;
+      right: 16px;
+      display: flex;
+      gap: 12px;
+      z-index: 10000;
+    }
+
     .social-fixed a {
-      display:inline-flex; align-items:center; justify-content:center; width:32px; height:32px;
-      color:var(--icon); background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.15);
-      border-radius:8px; text-decoration:none; transition:transform .2s ease, color .2s ease, background-color .2s ease;
-      backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      color: var(--icon);
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 8px;
+      text-decoration: none;
+      transition: transform .2s ease, color .2s ease, background-color .2s ease;
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
       -webkit-tap-highlight-color: transparent;
     }
-    .social-fixed a:hover { color:var(--iconHover); transform: translateY(-1px); background:rgba(255,255,255,.12);}
-    .social-fixed svg { width:18px; height:18px; display:block; }
 
-    /* Compact split card */
-    .card {
-      max-width: 1100px; margin: 96px auto; border-radius: 22px; overflow:hidden;
-      box-shadow: 0 18px 60px var(--shadow); background: var(--ivory); border:1px solid rgba(0,0,0,.08);
-      display:grid; grid-template-columns: 1.05fr 1fr; min-height: 540px;
+    .social-fixed a:hover {
+      color: var(--iconHover);
+      transform: translateY(-1px);
+      background: rgba(255,255,255,.12);
     }
+
+    .social-fixed svg {
+      width: 18px;
+      height: 18px;
+      display: block;
+    }
+
+    .card {
+      max-width: 1100px;
+      margin: 96px auto;
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 18px 60px var(--shadow);
+      background: var(--ivory);
+      border: 1px solid rgba(0,0,0,.08);
+      display: grid;
+      grid-template-columns: 1.05fr 1fr;
+      min-height: 540px;
+    }
+
     .left {
-      padding: 42px 44px; position:relative; display:flex; flex-direction:column; justify-content:center; gap:20px;
+      padding: 42px 44px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
       background: linear-gradient(180deg, #f6efe5 0%, #efe6da 100%);
     }
-    .right { position:relative; background:#101518; min-height:100%; }
-    .photo {
-      position:absolute; inset:0;
-background-image: url("thomtruax-photo.jpg");      filter: sepia(.24) hue-rotate(-5deg) saturate(1.05) contrast(1.06) brightness(0.99);
+
+    .right {
+      position: relative;
+      background: #101518;
+      min-height: 100%;
     }
+
+    .photo {
+      position: absolute;
+      inset: 0;
+      background-image: url("thomtruax-photo.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      filter: sepia(.24) hue-rotate(-5deg) saturate(1.05) contrast(1.06) brightness(0.99);
+    }
+
     .right::after {
-      content:""; position:absolute; inset:0; pointer-events:none;
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
       background:
         radial-gradient(120% 90% at 80% 40%, rgba(0,0,0,0) 55%, rgba(0,0,0,.18) 100%),
         radial-gradient(120% 70% at 10% 10%, rgba(27,153,139,.12) 0%, rgba(0,0,0,0) 60%),
@@ -56,42 +126,118 @@ background-image: url("thomtruax-photo.jpg");      filter: sepia(.24) hue-rotate
     }
 
     .name {
-      font-family: "Bodoni Moda", serif; font-weight:800; letter-spacing:.18em;
-      font-size: clamp(2rem, 4.6vw, 3.3rem); margin:0; color:#1c1b1a;
+      font-family: "Bodoni Moda", serif;
+      font-weight: 800;
+      letter-spacing: .18em;
+      font-size: clamp(2rem, 4.6vw, 3.3rem);
+      margin: 0;
+      color: #1c1b1a;
     }
-    .tagline { color:#6a5f53; letter-spacing:.25em; text-transform:lowercase; font-size:.95rem; }
 
-    .section-title { letter-spacing:.2em; font-weight:700; font-size:.9rem; color:#a77a45; text-transform:uppercase; margin: 10px 0 6px; }
+    .tagline {
+      color: #6a5f53;
+      letter-spacing: .25em;
+      text-transform: lowercase;
+      font-size: .95rem;
+    }
+
+    .section-title {
+      letter-spacing: .2em;
+      font-weight: 700;
+      font-size: .9rem;
+      color: #a77a45;
+      text-transform: uppercase;
+      margin: 10px 0 6px;
+    }
+
     .dropcap {
-      font-family:"Bodoni Moda",serif; font-weight:800; font-size:3rem; line-height:.85; float:left; margin:.15rem .6rem 0 0; color:#a8713c;
-      text-shadow:0 1px 0 rgba(255,255,255,.35);
+      font-family: "Bodoni Moda", serif;
+      font-weight: 800;
+      font-size: 3rem;
+      line-height: .85;
+      float: left;
+      margin: .15rem .6rem 0 0;
+      color: #a8713c;
+      text-shadow: 0 1px 0 rgba(255,255,255,.35);
     }
 
-    footer { color:#b8b2ac; text-align:center; padding: 14px 10px 40px; font-size:.85rem; }
+    footer {
+      color: #b8b2ac;
+      text-align: center;
+      padding: 14px 10px 40px;
+      font-size: .85rem;
+    }
 
-    /* ===== Mobile/iPhone tuning ===== */
     @media (max-width: 880px) {
-      .card { grid-template-columns: 1fr; min-height: unset; margin: 70px 12px; border-radius: 18px; }
-      .left { padding: 26px 20px 22px; }
-      .name { font-size: clamp(1.8rem, 7vw, 2.4rem); letter-spacing: .12em; }
-      .tagline { font-size: .9rem; letter-spacing:.18em; }
-      .right { height: 56vh; min-height: 360px; }
-      .photo { background-position: 52% 38%; } /* pull your torso/face into center on phones */
-      .dropcap { font-size: 2.4rem; margin-right: .5rem; }
-      .social-fixed { top: env(safe-area-inset-top, 8px); right: 10px; gap:10px; }
-      .social-fixed a { width: 34px; height: 34px; border-radius: 9px; }
-      .social-fixed svg { width:19px; height:19px; }
+      .card {
+        grid-template-columns: 1fr;
+        min-height: unset;
+        margin: 70px 12px;
+        border-radius: 18px;
+      }
+
+      .left {
+        padding: 26px 20px 22px;
+      }
+
+      .name {
+        font-size: clamp(1.8rem, 7vw, 2.4rem);
+        letter-spacing: .12em;
+      }
+
+      .tagline {
+        font-size: .9rem;
+        letter-spacing: .18em;
+      }
+
+      .right {
+        height: 56vh;
+        min-height: 360px;
+      }
+
+      .photo {
+        background-position: 52% 38%;
+      }
+
+      .dropcap {
+        font-size: 2.4rem;
+        margin-right: .5rem;
+      }
+
+      .social-fixed {
+        top: env(safe-area-inset-top, 8px);
+        right: 10px;
+        gap: 10px;
+      }
+
+      .social-fixed a {
+        width: 34px;
+        height: 34px;
+        border-radius: 9px;
+      }
+
+      .social-fixed svg {
+        width: 19px;
+        height: 19px;
+      }
     }
 
-    /* Very small phones */
     @media (max-width: 380px) {
-      .right { height: 50vh; min-height: 300px; }
-      .photo { background-position: 54% 42%; }
+      .right {
+        height: 50vh;
+        min-height: 300px;
+      }
+
+      .photo {
+        background-position: 54% 42%;
+      }
     }
 
-    /* Reduce motion preferences */
     @media (prefers-reduced-motion: reduce) {
-      * { animation: none !important; transition: none !important; }
+      * {
+        animation: none !important;
+        transition: none !important;
+      }
     }
   </style>
 </head>
@@ -104,6 +250,7 @@ background-image: url("thomtruax-photo.jpg");      filter: sepia(.24) hue-rotate
         <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
       </svg>
     </a>
+
     <a href="https://www.imdb.com/name/nm4881147/" target="_blank" rel="noopener noreferrer" aria-label="IMDb">
       <svg viewBox="0 0 64 32">
         <rect x="1" y="1" width="62" height="30" rx="6" ry="6" fill="none" stroke="currentColor" stroke-width="2"></rect>
@@ -121,12 +268,12 @@ background-image: url("thomtruax-photo.jpg");      filter: sepia(.24) hue-rotate
 
       <div>
         <h2 class="section-title">About</h2>
-        <p><span class="dropcap">T</span>hom Truax is a writer‑performer. His work specializes in turbocharged satire, pop spectacle, and moral panic—often using genre and exploitation cinema to interrogate power, belief systems, and celebrity mythology. He is currently developing the horror‑comedy feature <em>Slay of the Dead Vol. 1</em> for Semi-Formal Productions. On the television side, his pilot <em>Child of God</em> was a semi‑finalist in the ScreenCraft Screenwriting Fellowship 2023. A graduate of USC’s Writing for Film & Television program, his short film <em>Sorry, I Can’t Talk Right Now</em> premiered at Outfest 2022. He also has a degree in philosophy that he can prove exists outside of a simulation. </p>
+        <p><span class="dropcap">T</span>hom Truax is a writer-performer. His work specializes in turbocharged satire, pop spectacle, and moral panic—often using genre and exploitation cinema to interrogate power, belief systems, and celebrity mythology. He is currently developing the horror-comedy feature <em>Slay of the Dead Vol. 1</em> for Semi-Formal Productions. On the television side, his pilot <em>Child of God</em> was a semi-finalist in the ScreenCraft Screenwriting Fellowship 2023. A graduate of USC’s Writing for Film & Television program, his short film <em>Sorry, I Can’t Talk Right Now</em> premiered at Outfest 2022. He also has a degree in philosophy that he can prove exists outside of a simulation.</p>
       </div>
 
       <div>
         <h2 class="section-title">Contact</h2>
-       <p><a href="thomtruax@gmail.com" target="_blank"
+        <p><a href="mailto:thomtruax@gmail.com">thomtruax@gmail.com</a></p>
       </div>
     </section>
 
@@ -136,6 +283,8 @@ background-image: url("thomtruax-photo.jpg");      filter: sepia(.24) hue-rotate
   </main>
 
   <footer>© <span id="year"></span> Thom Truax</footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
