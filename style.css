@@ -1,1 +1,323 @@
+/* ==========================================
+   THOM TRUAX
+   style.css
+   Part One
+========================================== */
 
+/* ---------- RESET ---------- */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body,
+h1,
+h2,
+p,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ---------- VARIABLES ---------- */
+
+:root {
+
+    --paper: #f6f1e8;
+    --paper-dark: #eee6d8;
+
+    --ink: #191817;
+    --ink-light: #55504a;
+
+    --rule: #d6cdbf;
+
+    --accent: #8b6a45;
+
+    --max-width: 760px;
+
+    --body-font: "Libre Baskerville", serif;
+    --display-font: "Bodoni Moda", serif;
+
+    --transition: 220ms ease;
+
+}
+
+/* ---------- PAGE ---------- */
+
+body {
+
+    background: var(--paper);
+
+    color: var(--ink);
+
+    font-family: var(--body-font);
+
+    line-height: 1.8;
+
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+
+}
+
+.page {
+
+    width: min(92%, var(--max-width));
+
+    margin: 0 auto;
+
+    padding:
+
+        5rem
+        0
+        5rem
+        0;
+
+}
+
+/* ---------- HERO ---------- */
+
+.hero {
+
+    margin-bottom: 4rem;
+
+}
+
+.hero h1 {
+
+    font-family: var(--display-font);
+
+    font-size: clamp(3rem, 8vw, 5rem);
+
+    font-weight: 800;
+
+    letter-spacing: .08em;
+
+    line-height: .95;
+
+    margin-bottom: 1rem;
+
+}
+
+.profession {
+
+    font-size: 1rem;
+
+    color: var(--ink-light);
+
+    letter-spacing: .08em;
+
+    text-transform: uppercase;
+
+}
+
+/* ---------- RULES ---------- */
+
+hr {
+
+    border: none;
+
+    border-top: 1px solid var(--rule);
+
+    margin: 3.75rem 0;
+
+}
+
+/* ---------- SECTION HEADINGS ---------- */
+
+h2 {
+
+    font-family: var(--display-font);
+
+    font-size: 2rem;
+
+    margin-bottom: 2rem;
+
+}
+
+/* ---------- WORK ---------- */
+
+.work ul {
+
+    list-style: none;
+
+}
+
+.work li {
+
+    margin-bottom: 2rem;
+
+}
+
+.work a {
+
+    display: block;
+
+    text-decoration: none;
+
+    color: inherit;
+
+    transition: color var(--transition);
+
+}
+
+.work a:hover {
+
+    color: var(--accent);
+
+}
+
+.title {
+
+    display: block;
+
+    font-family: var(--display-font);
+
+    font-size: 1.5rem;
+
+    letter-spacing: .05em;
+
+    text-transform: uppercase;
+
+    margin-bottom: .35rem;
+
+}
+
+.medium {
+
+    display: block;
+
+    color: var(--ink-light);
+
+    font-size: .95rem;
+
+    letter-spacing: .08em;
+
+    text-transform: uppercase;
+
+}
+
+/* ---------- ABOUT ---------- */
+
+.about p {
+
+    max-width: 38rem;
+
+    margin-bottom: 1.5rem;
+
+}
+
+/* ---------- FOOTER ---------- */
+
+footer {
+
+    margin-top: 2rem;
+
+}
+
+footer ul {
+
+    list-style: none;
+
+    display: flex;
+
+    gap: 2rem;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 2rem;
+
+}
+
+footer a {
+
+    text-decoration: none;
+
+    color: var(--ink-light);
+
+    transition: color var(--transition);
+
+}
+
+footer a:hover {
+
+    color: var(--accent);
+
+}
+
+.copyright {
+
+    color: var(--ink-light);
+
+    font-size: .9rem;
+
+}
+
+/* ---------- LINKS ---------- */
+
+a {
+
+    color: inherit;
+
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 700px) {
+
+    .page {
+
+        width: 90%;
+
+        padding-top: 3rem;
+
+        padding-bottom: 3rem;
+
+    }
+
+    .hero {
+
+        margin-bottom: 3rem;
+
+    }
+
+    .hero h1 {
+
+        font-size: clamp(2.5rem, 12vw, 4rem);
+
+        letter-spacing: .05em;
+
+    }
+
+    h2 {
+
+        font-size: 1.6rem;
+
+    }
+
+    .title {
+
+        font-size: 1.2rem;
+
+    }
+
+    footer ul {
+
+        flex-direction: column;
+
+        gap: 1rem;
+
+    }
+
+}
