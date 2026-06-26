@@ -1,289 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Thom Truax — Writer • Performer • Philosopher</title>
-  <meta name="description" content="Thom Truax — writer • performer" />
-  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,700;6..96,800&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --ivory: #f6efe5;
-      --ink: #201a18;
-      --gold: #b38b59;
-      --shadow: rgba(0,0,0,.22);
-      --icon: #89aafc;
-      --iconHover: #6b8ff8;
-      --bg: #0e1215;
-    }
 
-    * { box-sizing: border-box; }
-    html, body { height: 100%; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    body {
-      margin: 0;
-      font-family: "Libre Baskerville", serif;
-      color: var(--ink);
-      background: var(--bg);
-    }
+    <title>Thom Truax</title>
 
-    a {
-      color: #5e3e1a;
-      text-underline-offset: 3px;
-    }
+    <meta name="description" content="The official website of Thom Truax, writer based in Los Angeles.">
 
-    a:hover {
-      color: #8a6132;
-    }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    .social-fixed {
-      position: fixed;
-      top: 14px;
-      right: 16px;
-      display: flex;
-      gap: 12px;
-      z-index: 10000;
-    }
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@700;800&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
 
-    .social-fixed a {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 32px;
-      height: 32px;
-      color: var(--icon);
-      background: rgba(255,255,255,.06);
-      border: 1px solid rgba(255,255,255,.15);
-      border-radius: 8px;
-      text-decoration: none;
-      transition: transform .2s ease, color .2s ease, background-color .2s ease;
-      backdrop-filter: blur(6px);
-      -webkit-backdrop-filter: blur(6px);
-      -webkit-tap-highlight-color: transparent;
-    }
+    <link rel="stylesheet" href="style.css">
 
-    .social-fixed a:hover {
-      color: var(--iconHover);
-      transform: translateY(-1px);
-      background: rgba(255,255,255,.12);
-    }
+    <script src="script.js" defer></script>
 
-    .social-fixed svg {
-      width: 18px;
-      height: 18px;
-      display: block;
-    }
-
-    .card {
-      max-width: 1100px;
-      margin: 96px auto;
-      border-radius: 22px;
-      overflow: hidden;
-      box-shadow: 0 18px 60px var(--shadow);
-      background: var(--ivory);
-      border: 1px solid rgba(0,0,0,.08);
-      display: grid;
-      grid-template-columns: 1.05fr 1fr;
-      min-height: 540px;
-    }
-
-    .left {
-      padding: 42px 44px;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 20px;
-      background: linear-gradient(180deg, #f6efe5 0%, #efe6da 100%);
-    }
-
-    .right {
-      position: relative;
-      background: #101518;
-      min-height: 100%;
-    }
-
-    .photo {
-      position: absolute;
-      inset: 0;
-      background-image: url("thomtruax-photo.jpg");
-      background-size: cover;
-      .photo { background-position: 55% 35%; }
-      background-repeat: no-repeat;
-      filter: sepia(.24) hue-rotate(-5deg) saturate(1.05) contrast(1.06) brightness(0.99);
-    }
-
-    .right::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      background:
-        radial-gradient(120% 90% at 80% 40%, rgba(0,0,0,0) 55%, rgba(0,0,0,.18) 100%),
-        radial-gradient(120% 70% at 10% 10%, rgba(27,153,139,.12) 0%, rgba(0,0,0,0) 60%),
-        radial-gradient(120% 70% at 90% 90%, rgba(255,153,51,.10) 0%, rgba(0,0,0,0) 60%);
-      mix-blend-mode: overlay;
-    }
-
-    .name {
-      font-family: "Bodoni Moda", serif;
-      font-weight: 800;
-      letter-spacing: .18em;
-      font-size: clamp(2rem, 4.6vw, 3.3rem);
-      margin: 0;
-      color: #1c1b1a;
-    }
-
-    .tagline {
-      color: #6a5f53;
-      letter-spacing: .25em;
-      text-transform: lowercase;
-      font-size: .95rem;
-    }
-
-    .section-title {
-      letter-spacing: .2em;
-      font-weight: 700;
-      font-size: .9rem;
-      color: #a77a45;
-      text-transform: uppercase;
-      margin: 10px 0 6px;
-    }
-
-    .dropcap {
-      font-family: "Bodoni Moda", serif;
-      font-weight: 800;
-      font-size: 3rem;
-      line-height: .85;
-      float: left;
-      margin: .15rem .6rem 0 0;
-      color: #a8713c;
-      text-shadow: 0 1px 0 rgba(255,255,255,.35);
-    }
-
-    footer {
-      color: #b8b2ac;
-      text-align: center;
-      padding: 14px 10px 40px;
-      font-size: .85rem;
-    }
-
-    @media (max-width: 880px) {
-      .card {
-        grid-template-columns: 1fr;
-        min-height: unset;
-        margin: 70px 12px;
-        border-radius: 18px;
-      }
-
-      .left {
-        padding: 26px 20px 22px;
-      }
-
-      .name {
-        font-size: clamp(1.8rem, 7vw, 2.4rem);
-        letter-spacing: .12em;
-      }
-
-      .tagline {
-        font-size: .9rem;
-        letter-spacing: .18em;
-      }
-
-      .right {
-        height: 56vh;
-        min-height: 360px;
-      }
-
-      .photo {
-        background-position: 52% 38%;
-      }
-
-      .dropcap {
-        font-size: 2.4rem;
-        margin-right: .5rem;
-      }
-
-      .social-fixed {
-        top: env(safe-area-inset-top, 8px);
-        right: 10px;
-        gap: 10px;
-      }
-
-      .social-fixed a {
-        width: 34px;
-        height: 34px;
-        border-radius: 9px;
-      }
-
-      .social-fixed svg {
-        width: 19px;
-        height: 19px;
-      }
-    }
-
-    @media (max-width: 380px) {
-      .right {
-        height: 50vh;
-        min-height: 300px;
-      }
-
-      .photo {
-        background-position: 54% 42%;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      * {
-        animation: none !important;
-        transition: none !important;
-      }
-    }
-  </style>
 </head>
+
 <body>
-  <nav class="social-fixed" aria-label="Social links">
-    <a href="https://www.instagram.com/thomtruax/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-        <rect x="3" y="3" width="18" height="18" rx="5" ry="5"></rect>
-        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-      </svg>
-    </a>
 
-    <a href="https://www.imdb.com/name/nm4881147/" target="_blank" rel="noopener noreferrer" aria-label="IMDb">
-      <svg viewBox="0 0 64 32">
-        <rect x="1" y="1" width="62" height="30" rx="6" ry="6" fill="none" stroke="currentColor" stroke-width="2"></rect>
-        <text x="32" y="21" text-anchor="middle" font-family="Bodoni Moda, Georgia, serif" font-size="14" fill="currentColor">IMDb</text>
-      </svg>
-    </a>
-  </nav>
+<main class="page">
 
-  <main class="card">
-    <section class="left">
-      <header>
-        <h1 class="name">THOM TRUAX</h1>
-        <div class="tagline">writer • performer</div>
-      </header>
+<header class="hero">
 
-      <div>
-        <h2 class="section-title">About</h2>
- <p><span class="dropcap">T</span>hom Truax is a writer based in Los Angeles. He studied screenwriting and philosophy at the University of Southern California, where he earned degrees in both disciplines.</p>
+<h1>THOM TRUAX</h1>
 
-      <div>
-        <h2 class="section-title">Contact</h2>
-        <p><a href="mailto:thomtruax@gmail.com">thomtruax@gmail.com</a></p>
-      </div>
-    </section>
+<p class="profession">Writer</p>
 
-    <aside class="right" aria-hidden="true">
-      <div class="photo" role="img" aria-label="Portrait of Thom Truax"></div>
-    </aside>
-  </main>
+</header>
 
-  <footer>© <span id="year"></span> Thom Truax</footer>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+<hr>
+
+<section class="work">
+
+<h2>Work</h2>
+
+<ul>
+
+<li>
+<a href="#">
+<span class="title">MOUTH WIDE HUSH</span>
+<span class="medium">Literary Fiction</span>
+</a>
+</li>
+
+<li>
+<a href="#">
+<span class="title">SLAY OF THE DEAD</span>
+<span class="medium">Feature Screenplay</span>
+</a>
+</li>
+
+<li>
+<a href="#">
+<span class="title">CHILD OF GOD</span>
+<span class="medium">Television Pilot</span>
+</a>
+</li>
+
+<li>
+<a href="#">
+<span class="title">SORRY, I CAN'T TALK RIGHT NOW</span>
+<span class="medium">Short Film</span>
+</a>
+</li>
+
+</ul>
+
+</section>
+
+<hr>
+
+<section class="about">
+
+<h2>About</h2>
+
+<p>
+
+Thom Truax is a writer based in Los Angeles.
+
+</p>
+
+<p>
+
+He studied screenwriting and philosophy at the University of Southern California.
+
+</p>
+
+</section>
+
+<hr>
+
+<footer>
+
+<nav>
+
+<ul>
+
+<li>
+<a href="https://www.instagram.com/thomtruax/" target="_blank" rel="noopener">
+Instagram
+</a>
+</li>
+
+<li>
+<a href="https://www.imdb.com/name/nm4881147/" target="_blank" rel="noopener">
+IMDb
+</a>
+</li>
+
+<li>
+<a href="mailto:thomtruax@gmail.com">
+Email
+</a>
+</li>
+
+</ul>
+
+</nav>
+
+<p class="copyright">
+
+© <span id="year"></span> Thom Truax
+
+</p>
+
+</footer>
+
+</main>
+
 </body>
+
 </html>
+```
