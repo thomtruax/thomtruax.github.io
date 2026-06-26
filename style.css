@@ -1,14 +1,16 @@
-/*==================================================
+css
+/*====================================================
 
 THOM TRUAX
-Version 1.0A
+style.css
+Version 1.1A
 
-==================================================*/
+====================================================*/
 
 
-/*--------------------
+/*------------------------------
 RESET
---------------------*/
+------------------------------*/
 
 *,
 *::before,
@@ -22,45 +24,47 @@ html{
 
 body,
 h1,
+h2,
 p,
 ul,
-li{
+li,
+hr{
     margin:0;
     padding:0;
 }
 
 img{
-    display:block;
     max-width:100%;
+    display:block;
 }
 
 
-/*--------------------
-VARIABLES
---------------------*/
+/*------------------------------
+ROOT
+------------------------------*/
 
 :root{
 
-    --paper:#f7f4ee;
-    --paper-dark:#ece6db;
+    --paper:#f7f3ec;
 
-    --ink:#191919;
-    --muted:#67615b;
+    --ink:#1d1b19;
 
-    --rule:#d9d0c3;
+    --muted:#716a61;
 
-    --accent:#8a6d49;
+    --rule:#ddd4c8;
 
-    --width:640px;
+    --accent:#8b7150;
 
-    --font:"EB Garamond", serif;
+    --column:610px;
+
+    --transition:180ms ease;
 
 }
 
 
-/*--------------------
+/*------------------------------
 BODY
---------------------*/
+------------------------------*/
 
 body{
 
@@ -68,76 +72,64 @@ body{
 
     color:var(--ink);
 
-    font-family:var(--font);
+    font-family:"EB Garamond", serif;
 
-    font-size:21px;
+    font-size:20px;
 
-    line-height:1.75;
-
-    -webkit-font-smoothing:antialiased;
+    line-height:1.65;
 
     text-rendering:optimizeLegibility;
+
+    -webkit-font-smoothing:antialiased;
 
 }
 
 
-/*--------------------
+/*------------------------------
 PAGE
---------------------*/
+------------------------------*/
 
 .page{
 
-    width:min(90%, var(--width));
+    width:min(90vw,var(--column));
 
     margin:0 auto;
 
     padding:
 
-        72px
+        54px
         0
-        72px;
+        48px;
 
 }
 
 
-/*--------------------
+/*------------------------------
 MASTHEAD
---------------------*/
+------------------------------*/
 
 .hero{
 
-    margin-bottom:48px;
+    margin-bottom:34px;
 
 }
 
 .hero h1{
 
-    font-size:58px;
+    font-size:4rem;
 
     font-weight:600;
 
-    letter-spacing:.01em;
+    letter-spacing:-0.03em;
 
-    line-height:1;
-
-}
-
-.profession{
-
-    margin-top:8px;
-
-    color:var(--muted);
-
-    font-size:20px;
-
-    font-style:italic;
+    line-height:.95;
 
 }
 
 
-/*--------------------
+/*------------------------------
 RULES
---------------------*/
+------------------------------*/
 
 hr{
 
@@ -145,14 +137,14 @@ hr{
 
     border-top:1px solid var(--rule);
 
-    margin:42px 0;
+    margin:28px 0;
 
 }
 
 
-/*--------------------
+/*------------------------------
 PROJECTS
---------------------*/
+------------------------------*/
 
 .projects ul{
 
@@ -162,7 +154,7 @@ PROJECTS
 
 .projects li{
 
-    margin-bottom:34px;
+    margin-bottom:22px;
 
 }
 
@@ -176,11 +168,11 @@ PROJECTS
 
     display:inline-block;
 
-    color:inherit;
-
     text-decoration:none;
 
-    transition:220ms;
+    color:inherit;
+
+    transition:color var(--transition);
 
 }
 
@@ -188,13 +180,15 @@ PROJECTS
 
     display:block;
 
-    font-size:35px;
+    font-size:2.15rem;
 
     font-weight:600;
 
-    letter-spacing:.02em;
-
     text-transform:uppercase;
+
+    letter-spacing:-0.02em;
+
+    line-height:1.05;
 
 }
 
@@ -202,20 +196,20 @@ PROJECTS
 
     display:block;
 
-    margin-top:3px;
+    margin-top:2px;
 
     color:var(--muted);
 
-    font-size:18px;
+    font-size:1.15rem;
 
     font-style:italic;
 
 }
 
 
-/*--------------------
+/*------------------------------
 ABOUT
---------------------*/
+------------------------------*/
 
 .about{
 
@@ -230,13 +224,13 @@ ABOUT
 }
 
 
-/*--------------------
+/*------------------------------
 FOOTER
---------------------*/
+------------------------------*/
 
 footer{
 
-    color:var(--muted);
+    padding-bottom:10px;
 
 }
 
@@ -244,42 +238,44 @@ footer nav{
 
     display:flex;
 
-    align-items:center;
-
-    gap:10px;
+    gap:.65rem;
 
     flex-wrap:wrap;
+
+    align-items:center;
+
+    font-size:1rem;
 
 }
 
 footer nav a{
 
-    color:inherit;
+    color:var(--muted);
 
     text-decoration:none;
 
-    transition:220ms;
+    transition:color var(--transition);
 
 }
 
 footer nav span{
 
-    opacity:.5;
+    color:var(--rule);
 
 }
+
+/* Hide the copyright completely */
 
 .copyright{
 
-    margin-top:18px;
-
-    font-size:16px;
+    display:none;
 
 }
 
 
-/*--------------------
-LINK STATES
---------------------*/
+/*------------------------------
+INTERACTION
+------------------------------*/
 
 .projects a:hover{
 
@@ -300,64 +296,64 @@ footer a:hover{
 }
 
 
-/*--------------------
+/*------------------------------
 RESPONSIVE
---------------------*/
+------------------------------*/
 
 @media (max-width:700px){
 
-body{
+    body{
 
-    font-size:19px;
+        font-size:19px;
 
-}
+    }
 
-.page{
+    .page{
 
-    width:88%;
+        width:88vw;
 
-    padding:
+        padding:
 
-        52px
-        0
-        56px;
+            42px
+            0
+            42px;
 
-}
+    }
 
-.hero h1{
+    .hero{
 
-    font-size:46px;
+        margin-bottom:26px;
 
-}
+    }
 
-.title{
+    .hero h1{
 
-    font-size:28px;
+        font-size:3rem;
 
-}
+    }
 
-.medium{
+    .title{
 
-    font-size:17px;
+        font-size:1.7rem;
 
-}
+    }
 
-hr{
+    .medium{
 
-    margin:34px 0;
+        font-size:1rem;
 
-}
+    }
 
-.projects li{
+    hr{
 
-    margin-bottom:26px;
+        margin:22px 0;
 
-}
+    }
 
-footer nav{
+    .projects li{
 
-    gap:8px;
+        margin-bottom:18px;
 
-}
+    }
 
 }
