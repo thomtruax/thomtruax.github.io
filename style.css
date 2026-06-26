@@ -357,3 +357,245 @@ RESPONSIVE
     }
 
 }
+```css
+/*====================================================
+
+Version 1.1B
+Final Polish
+
+Append to the END of style.css
+
+====================================================*/
+
+
+/*----------------------------------
+TYPOGRAPHIC RHYTHM
+----------------------------------*/
+
+.hero{
+
+    margin-bottom:2.25rem;
+
+}
+
+.hero h1{
+
+    max-width:12ch;
+
+}
+
+.projects{
+
+    margin-top:.25rem;
+
+}
+
+.projects li{
+
+    margin-bottom:1.8rem;
+
+}
+
+.projects li:last-child{
+
+    margin-bottom:0;
+
+}
+
+.title{
+
+    transition:
+        color .18s ease,
+        transform .18s ease;
+
+}
+
+.medium{
+
+    transition:
+        color .18s ease,
+        opacity .18s ease;
+
+}
+
+
+/*----------------------------------
+READING EXPERIENCE
+----------------------------------*/
+
+.about{
+
+    max-width:32rem;
+
+}
+
+.about p{
+
+    color:var(--muted);
+
+    line-height:1.8;
+
+}
+
+
+/*----------------------------------
+LINKS
+----------------------------------*/
+
+.projects a{
+
+    position:relative;
+
+}
+
+.projects a:hover{
+
+    transform:translateX(2px);
+
+}
+
+.projects a:hover .title{
+
+    color:var(--ink);
+
+}
+
+.projects a:hover .medium{
+
+    color:var(--accent);
+
+}
+
+.projects a:focus-visible{
+
+    outline:2px solid var(--accent);
+
+    outline-offset:6px;
+
+}
+
+
+/*----------------------------------
+FOOTER
+----------------------------------*/
+
+footer{
+
+    margin-top:-.25rem;
+
+}
+
+footer nav{
+
+    justify-content:flex-start;
+
+}
+
+footer nav a{
+
+    letter-spacing:.01em;
+
+}
+
+footer nav a:hover{
+
+    color:var(--ink);
+
+}
+
+
+/*----------------------------------
+TEXT SELECTION
+----------------------------------*/
+
+::selection{
+
+    background:#ddd1be;
+
+    color:var(--ink);
+
+}
+
+
+/*----------------------------------
+ACCESSIBILITY
+----------------------------------*/
+
+a{
+
+    -webkit-tap-highlight-color:transparent;
+
+}
+
+
+/*----------------------------------
+REDUCED MOTION
+----------------------------------*/
+
+@media (prefers-reduced-motion:reduce){
+
+    *{
+
+        animation:none !important;
+
+        transition:none !important;
+
+        scroll-behavior:auto !important;
+
+    }
+
+}
+
+
+/*----------------------------------
+PRINT
+----------------------------------*/
+
+@media print{
+
+    body{
+
+        background:white;
+
+        color:black;
+
+        font-size:12pt;
+
+    }
+
+    hr{
+
+        border-color:#999;
+
+    }
+
+    footer{
+
+        display:none;
+
+    }
+
+}
+
+
+/*----------------------------------
+LARGER DESKTOPS
+----------------------------------*/
+
+@media (min-width:1200px){
+
+    .page{
+
+        padding-top:4rem;
+
+    }
+
+}
+
+
+/*====================================================
+
+END
+
+====================================================*/
+```
