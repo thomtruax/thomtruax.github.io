@@ -54,25 +54,26 @@ body{
     display:flex;
     flex-direction:column;
     align-items:flex-end;
+    text-align:right;
     margin-bottom:2.35rem;
 }
 
 .hero h1{
-    font-size:2.85rem;
+    font-size:clamp(2.55rem,6vw,2.9rem);
     font-weight:600;
     line-height:1;
-    letter-spacing:.08em;
+    letter-spacing:.075em;
     text-transform:uppercase;
-    transform:translateX(58px);
+    transform:translateX(clamp(1.25rem,4vw,2.25rem));
 }
 
 .location{
-    margin-top:.25rem;
+    margin-top:.32rem;
     color:var(--soft);
     font-size:.74rem;
-    letter-spacing:.45em;
+    letter-spacing:.4em;
     text-transform:uppercase;
-    transform:translateX(58px);
+    transform:translateX(clamp(1.25rem,4vw,2.25rem));
 }
 
 /* Dividers */
@@ -183,7 +184,7 @@ footer a:hover{
     }
 
     .hero h1{
-        font-size:2.4rem;
+        font-size:2.35rem;
     }
 
     .title{
