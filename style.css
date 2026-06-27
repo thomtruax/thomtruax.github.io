@@ -137,6 +137,21 @@ MASTHEAD
     text-transform:uppercase;
 
 }
+}
+
+.location{
+
+    margin-top:.65rem;
+
+    color:var(--soft);
+
+    font-size:.92rem;
+
+    letter-spacing:.22em;
+
+    text-transform:uppercase;
+
+}
 
 }
 
