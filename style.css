@@ -55,7 +55,7 @@ ROOT
 
     --accent:#8b7150;
 
-    --column:610px;
+    --column:525px;
 
     --transition:180ms ease;
 
@@ -116,7 +116,7 @@ MASTHEAD
 
 .hero h1{
 
-    font-size:4rem;
+    font-size:3.35rem;
 
     font-weight:600;
 
@@ -137,7 +137,7 @@ hr{
 
     border-top:1px solid var(--rule);
 
-    margin:28px 0;
+    margin:20px 0;
 
 }
 
@@ -154,7 +154,7 @@ PROJECTS
 
 .projects li{
 
-    margin-bottom:22px;
+    margin-bottom:14px;
 
 }
 
@@ -180,7 +180,7 @@ PROJECTS
 
     display:block;
 
-    font-size:2.15rem;
+    font-size:1.72rem;
 
     font-weight:600;
 
@@ -200,7 +200,7 @@ PROJECTS
 
     color:var(--muted);
 
-    font-size:1.15rem;
+    font-size:.95rem;
 
     font-style:italic;
 
@@ -433,7 +433,7 @@ READING EXPERIENCE
 
     color:var(--muted);
 
-    line-height:1.8;
+    line-height:1.62;
 
 }
 
@@ -450,7 +450,6 @@ LINKS
 
 .projects a:hover{
 
-    transform:translateX(2px);
 
 }
 
