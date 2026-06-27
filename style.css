@@ -1,170 +1,22 @@
-/*==================================================
-THOM TRUAX
-STYLE.CSS
-EDITION FIVE
-==================================================*/
-
-:root{
-    --paper:#f7f3ec;
-    --ink:#191816;
-    --soft:#746d65;
-    --rule:#e2d9cd;
-    --accent:#8f7657;
-    --column:500px;
-}
-
-*,
-*::before,
-*::after{
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body,
-h1,p,ul,li,hr{
-    margin:0;
-    padding:0;
-}
-
-body{
-    background:var(--paper);
-    color:var(--ink);
-    font-family:"Cormorant Garamond",serif;
-    font-size:18.5px;
-    line-height:1.62;
-    text-rendering:optimizeLegibility;
-    -webkit-font-smoothing:antialiased;
-}
-
-.page{
-    width:min(76vw,var(--column));
-    margin:42px auto 34px;
-}
-
-/* ---------- Masthead ---------- */
-
-.hero{
-    display:flex;
-    flex-direction:column;
-    align-items:flex-end;
-    margin-bottom:1.9rem;
-}
-
-.hero h1{
-    font-size:2.85rem;
-    font-weight:600;
-    line-height:1;
-    letter-spacing:.08em;
-    text-transform:uppercase;
-    transform:translateX(58px);
-}
-
-.location{
-    margin-top:.25rem;
-    transform:translateX(58px);
-    color:var(--soft);
-    font-size:.74rem;
-    letter-spacing:.45em;
-    text-transform:uppercase;
-}
-
-hr{
-    border:none;
-    border-top:1px solid var(--rule);
-    margin:1.4rem 0;
-}
-
-/* ---------- Projects ---------- */
-
-.projects ul{
-    list-style:none;
-}
-
-.projects li{
-    margin-bottom:1rem;
-}
-
-.projects a{
-    display:inline-block;
-    color:inherit;
-    text-decoration:none;
-    transition:opacity .18s ease, transform .18s ease;
-}
-
-.projects a:hover{
-    opacity:.72;
-    transform:translateY(-1px);
-}
-
-.title{
-    display:block;
-    font-size:1.48rem;
-    font-weight:500;
-    letter-spacing:-.02em;
-    line-height:1.02;
-    text-transform:uppercase;
-}
-
-.medium{
-    display:block;
-    margin-top:.12rem;
-    color:var(--soft);
-    font-size:.82rem;
-    font-style:italic;
-}
-
-/* ---------- About ---------- */
-
-.about{
-    max-width:28rem;
-}
-
-.about p{
-    font-size:.95rem;
-    line-height:1.7;
-    color:#4f4a45;
-}
-
-footer{
-    margin-top:.5rem;
-}
-
-footer nav{
-    display:flex;
-    gap:.7rem;
-    font-size:.95rem;
-}
-
-footer a{
-    color:inherit;
-    text-decoration:none;
-    opacity:.75;
-    transition:opacity .18s ease;
-}
-
-footer a:hover{
-    opacity:1;
-}
-
-@media (max-width:700px){
-
-.page{
-    width:min(90vw,500px);
-    margin:28px auto;
-}
-
-.hero h1,
-.location{
-    transform:none;
-}
-
-.hero h1{
-    font-size:2.4rem;
-}
-
-.title{
-    font-size:1.3rem;
-}
+*{box-sizing:border-box}body,h1,p,ul,li,hr{margin:0;padding:0}
+:root{--paper:#f7f3ec;--ink:#191816;--soft:#746d65;--rule:#e3dbcf}
+body{background:var(--paper);color:var(--ink);font-family:"Cormorant Garamond",serif;font-size:19px;line-height:1.62;-webkit-font-smoothing:antialiased}
+.page{max-width:760px;margin:40px auto;padding:0 36px}
+.masthead{text-align:right;margin-bottom:34px;padding-right:8px}
+.masthead h1{text-transform:uppercase;font-size:2.35rem;letter-spacing:.1em;font-weight:600}
+.masthead p{text-transform:uppercase;letter-spacing:.42em;font-size:.72rem;color:var(--soft);margin-top:8px}
+.content{max-width:520px;margin-left:-38px}
+hr{border:none;border-top:1px solid var(--rule);margin:22px 0}
+.projects ul{list-style:none}
+.projects li{margin:0 0 18px}
+.projects a{text-decoration:none;color:inherit}
+.title{display:block;font-size:1.58rem;font-weight:500;text-transform:uppercase;line-height:1.03}
+.medium{display:block;font-size:.86rem;font-style:italic;color:var(--soft);margin-top:2px}
+.about p{font-size:1rem;line-height:1.72;color:#4d4944;max-width:30rem}
+footer nav{display:flex;gap:.7rem;font-size:.95rem}
+footer a{text-decoration:none;color:inherit}
+@media(max-width:700px){
+.page{padding:0 20px}
+.content{margin-left:0;max-width:none}
+.masthead{text-align:left;padding-right:0}
+.masthead h1{font-size:2rem}
