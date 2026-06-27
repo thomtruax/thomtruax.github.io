@@ -109,9 +109,17 @@ hr{
     transition:opacity .2s ease, transform .2s ease;
 }
 
-.projects a:hover{
-    opacity:.78;
-    transform:translateX(.12rem);
+.projects a:focus-visible,
+footer a:focus-visible{
+    outline:1px solid var(--accent);
+    outline-offset:.24rem;
+}
+
+@media (hover:hover){
+    .projects a:hover{
+        opacity:.78;
+        transform:translateX(.12rem);
+    }
 }
 
 .title{
@@ -153,6 +161,7 @@ footer{
 footer nav{
     display:flex;
     align-items:center;
+    flex-wrap:wrap;
     gap:.78rem;
     color:var(--soft);
     font-size:.86rem;
@@ -168,8 +177,10 @@ footer a{
     transition:opacity .2s ease;
 }
 
-footer a:hover{
-    opacity:.95;
+@media (hover:hover){
+    footer a:hover{
+        opacity:.95;
+    }
 }
 
 /* Mobile */
@@ -213,5 +224,38 @@ footer a:hover{
         gap:.62rem;
         font-size:.8rem;
         letter-spacing:.045em;
+    }
+}
+
+@media (max-width:430px){
+    .page{
+        width:min(86vw,500px);
+        margin-top:34px;
+    }
+
+    .hero h1{
+        font-size:2.1rem;
+    }
+
+    .location{
+        font-size:.7rem;
+        letter-spacing:.34em;
+    }
+
+    .title{
+        font-size:1.18rem;
+        line-height:1.12;
+    }
+
+    .medium{
+        margin-top:.2rem;
+    }
+}
+
+@media (prefers-reduced-motion:reduce){
+    *,
+    *::before,
+    *::after{
+        transition:none !important;
     }
 }
