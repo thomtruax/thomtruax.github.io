@@ -1,132 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title>Thom Truax</title>
-
-<meta name="description" content="The official website of Thom Truax, writer based in Los Angeles.">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="style.css">
-
-<script src="script.js" defer></script>
-
-</head>
-
-<body>
-
-<main class="page">
-<header class="hero">
-
-    <h1>Thom Truax</h1>
-
-    <p class="location">Los Angeles</p>
-
-</header>
-
-<hr>
-
-<section class="projects">
-
-<ul>
-
-<li>
-
-<a href="#">
-
-<span class="title">Mouth Wide Hush</span>
-
-<span class="medium">Literary fiction</span>
-
-</a>
-
-</li>
-
-<li>
-
-<a href="#">
-
-<span class="title">Slay of the Dead Vol. 1</span>
-
-<span class="medium">Feature screenplay</span>
-
-</a>
-
-</li>
-
-<li>
-
-<a href="#">
-
-<span class="title">Phantasmagoria</span>
-
-<span class="medium">Television pilot</span>
-
-</a>
-
-</li>
-
-<li>
-
-<a href="#">
-
-<span class="title">Sorry, I Can't Talk Right Now</span>
-
-<span class="medium">Short film</span>
-
-</a>
-
-</li>
-
-</ul>
-
-</section>
-
-<hr>
-
-<section class="about">
-
-<p>
-
-Thom Truax is a writer based in Los Angeles. He studied screenwriting and philosophy at the University of Southern California.
-
-</p>
-
-</section>
-
-<hr>
-
-<footer>
-
-<nav>
-
-<a href="https://www.instagram.com/thomtruax/" target="_blank" rel="noopener">Instagram</a>
-
-<span>·</span>
-
-<a href="https://www.imdb.com/name/nm4881147/" target="_blank" rel="noopener">IMDb</a>
-
-<span>·</span>
-
-<a href="mailto:thomtruax@gmail.com">Contact</a>
-
-</nav>
-
-
-</p>
-
-</footer>
-
-</main>
-
-</body>
-
-</html>
+*{box-sizing:border-box}body,h1,p,ul,li,hr{margin:0;padding:0}
+:root{--paper:#f7f3ec;--ink:#191816;--soft:#746d65;--rule:#e3dbcf}
+body{background:var(--paper);color:var(--ink);font-family:"Cormorant Garamond",serif;font-size:19px;line-height:1.62;-webkit-font-smoothing:antialiased}
+.page{max-width:760px;margin:40px auto;padding:0 36px}
+.masthead{text-align:right;margin-bottom:34px;padding-right:8px}
+.masthead h1{text-transform:uppercase;font-size:2.35rem;letter-spacing:.1em;font-weight:600}
+.masthead p{text-transform:uppercase;letter-spacing:.42em;font-size:.72rem;color:var(--soft);margin-top:8px}
+.content{max-width:520px;margin-left:-38px}
+hr{border:none;border-top:1px solid var(--rule);margin:22px 0}
+.projects ul{list-style:none}
+.projects li{margin:0 0 18px}
+.projects a{text-decoration:none;color:inherit}
+.title{display:block;font-size:1.58rem;font-weight:500;text-transform:uppercase;line-height:1.03}
+.medium{display:block;font-size:.86rem;font-style:italic;color:var(--soft);margin-top:2px}
+.about p{font-size:1rem;line-height:1.72;color:#4d4944;max-width:30rem}
+footer nav{display:flex;gap:.7rem;font-size:.95rem}
+footer a{text-decoration:none;color:inherit}
+@media(max-width:700px){
+.page{padding:0 20px}
+.content{margin-left:0;max-width:none}
+.masthead{text-align:left;padding-right:0}
+.masthead h1{font-size:2rem}
+}
