@@ -1,1 +1,315 @@
+/*==================================================
+THOM TRUAX
+STYLE.CSS
+EDITION FOUR
+EDITION FIVE
+==================================================*/
 
+:root{
+    --paper:#f8f5ef;
+    --paper:#f7f3ec;
+--ink:#191816;
+    --soft:#736d66;
+    --rule:#e6ddd1;
+    --soft:#746d65;
+    --rule:#e2d9cd;
+--accent:#8f7657;
+
+    --column:520px;
+    --column:500px;
+}
+
+*,
+@@ -25,251 +24,147 @@ html{
+}
+
+body,
+h1,
+p,
+ul,
+li,
+hr{
+h1,p,ul,li,hr{
+margin:0;
+padding:0;
+}
+
+body{
+background:var(--paper);
+color:var(--ink);
+
+    font-family:"Cormorant Garamond", serif;
+
+    font-size:20px;
+    line-height:1.65;
+
+    font-family:"Cormorant Garamond",serif;
+    font-size:18.5px;
+    line-height:1.62;
+text-rendering:optimizeLegibility;
+-webkit-font-smoothing:antialiased;
+}
+
+.page{
+
+    width:min(92vw,var(--column));
+
+    margin:52px auto 48px;
+
+    width:min(76vw,var(--column));
+    margin:42px auto 34px;
+}
+
+/*==============================
+HEADER
+==============================*/
+/* ---------- Masthead ---------- */
+
+.hero{
+
+display:flex;
+
+flex-direction:column;
+
+align-items:flex-end;
+
+    margin-bottom:2.3rem;
+
+    padding-right:-40px;
+
+    margin-bottom:1.9rem;
+}
+
+.hero h1{
+
+    font-size:4.35rem;
+
+    font-size:2.85rem;
+font-weight:600;
+
+    line-height:.88;
+
+    letter-spacing:-.055em;
+
+    transform:translateX(70px);
+
+    line-height:1;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    transform:translateX(58px);
+}
+
+.location{
+
+margin-top:.25rem;
+
+    transform:translateX(70px);
+
+    transform:translateX(58px);
+color:var(--soft);
+
+    font-size:.78rem;
+
+    letter-spacing:.42em;
+
+    font-size:.74rem;
+    letter-spacing:.45em;
+text-transform:uppercase;
+
+}
+
+/*==============================
+RULES
+==============================*/
+
+hr{
+
+border:none;
+
+border-top:1px solid var(--rule);
+
+    margin:1.55rem 0;
+
+    margin:1.4rem 0;
+}
+
+/*==============================
+PROJECTS
+==============================*/
+/* ---------- Projects ---------- */
+
+.projects ul{
+
+list-style:none;
+
+}
+
+.projects li{
+
+    margin-bottom:1.25rem;
+
+    margin-bottom:1rem;
+}
+
+.projects a{
+
+display:inline-block;
+
+color:inherit;
+
+text-decoration:none;
+
+    transition:opacity .18s ease,
+               transform .18s ease;
+
+    transition:opacity .18s ease, transform .18s ease;
+}
+
+.projects a:hover{
+
+opacity:.72;
+
+transform:translateY(-1px);
+
+}
+
+.title{
+
+display:block;
+
+    font-size:1.72rem;
+
+    font-size:1.48rem;
+font-weight:500;
+
+    line-height:1;
+
+    letter-spacing:-.025em;
+
+    letter-spacing:-.02em;
+    line-height:1.02;
+text-transform:uppercase;
+
+}
+
+.medium{
+
+display:block;
+
+    margin-top:.15rem;
+
+    margin-top:.12rem;
+color:var(--soft);
+
+    font-size:.9rem;
+
+    font-size:.82rem;
+font-style:italic;
+
+}
+
+/*==============================
+ABOUT
+==============================*/
+/* ---------- About ---------- */
+
+.about{
+
+    max-width:29rem;
+
+    max-width:28rem;
+}
+
+.about p{
+
+    color:#4d4945;
+
+    font-size:1.04rem;
+
+    line-height:1.65;
+
+    font-size:.95rem;
+    line-height:1.7;
+    color:#4f4a45;
+}
+
+/*==============================
+FOOTER
+==============================*/
+
+footer{
+
+margin-top:.5rem;
+
+}
+
+footer nav{
+
+display:flex;
+
+    gap:.65rem;
+
+    font-size:.98rem;
+
+    gap:.7rem;
+    font-size:.95rem;
+}
+
+footer a{
+
+color:inherit;
+
+text-decoration:none;
+
+    opacity:.72;
+
+    opacity:.75;
+transition:opacity .18s ease;
+
+}
+
+footer a:hover{
+
+opacity:1;
+
+}
+
+/*==============================
+MOBILE
+==============================*/
+
+@media (max-width:700px){
+
+.hero h1{
+
+    font-size:3.15rem;
+
+    transform:none;
+
+.page{
+    width:min(90vw,500px);
+    margin:28px auto;
+}
+
+.hero h1,
+.location{
+
+transform:none;
+
+}
+
+.title{
+
+    font-size:1.45rem;
+
+.hero h1{
+    font-size:2.4rem;
+}
+
+.page{
+
+    margin:36px auto;
+
+.title{
+    font-size:1.3rem;
+}
