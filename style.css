@@ -102,19 +102,41 @@ MASTHEAD
 
 .hero{
 
-    margin-bottom:1.6rem;
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-end;
+
+    margin-bottom:2.25rem;
 
 }
 
 .hero h1{
 
-    font-size:3.05rem;
+    font-size:2.9rem;
 
     font-weight:600;
 
     line-height:.95;
 
     letter-spacing:-.03em;
+
+}
+
+.location{
+
+    margin-top:.65rem;
+
+    color:var(--soft);
+
+    font-size:.92rem;
+
+    letter-spacing:.22em;
+
+    text-transform:uppercase;
+
+}
 
 }
 
