@@ -229,6 +229,93 @@ footer a{
     transition:opacity .24s ease;
 }
 
+/* Homepage Composition */
+
+.home-page .page{
+    width:min(82vw,620px);
+}
+
+.home-page .hero{
+    margin-bottom:2.35rem;
+}
+
+.home-page .hero h1,
+.home-page .location{
+    transform:translateX(clamp(2.1rem,5.4vw,3.1rem));
+}
+
+.home-page .page > hr{
+    border-color:#d7cec2;
+}
+
+.home-page .page > hr:nth-of-type(1){
+    width:76%;
+    margin:1.7rem 0 2rem auto;
+}
+
+.home-page .page > hr:nth-of-type(2){
+    width:70%;
+    margin:2.35rem auto 2.15rem 0;
+}
+
+.home-page .page > hr:nth-of-type(3){
+    width:48%;
+    margin:2.45rem 0 1.35rem auto;
+}
+
+.home-page .projects{
+    transform:translateX(clamp(-2rem,-3.4vw,-1rem));
+}
+
+.home-page .projects a,
+.home-page footer a{
+    transition:none;
+}
+
+.home-page .projects ul{
+    max-width:34rem;
+}
+
+.home-page .projects li{
+    margin-bottom:1.42rem;
+}
+
+.home-page .projects li:nth-child(even){
+    padding-left:clamp(1.35rem,5vw,3.2rem);
+}
+
+.home-page .projects li:nth-child(3){
+    padding-left:clamp(.45rem,2vw,1.25rem);
+}
+
+.home-page .title{
+    font-size:1.38rem;
+    letter-spacing:.04em;
+}
+
+.home-page .medium{
+    margin-top:.15rem;
+}
+
+.home-page .about{
+    max-width:25.5rem;
+    margin-left:auto;
+}
+
+.home-page .about p{
+    color:#403b36;
+    font-size:.94rem;
+    line-height:1.9;
+}
+
+.home-page footer{
+    margin-top:0;
+}
+
+.home-page footer nav{
+    justify-content:flex-end;
+}
+
 @media (hover:hover){
     footer a:hover{
         opacity:.92;
@@ -261,6 +348,37 @@ footer a{
         letter-spacing:.085em;
     }
 
+    .home-page .page{
+        width:min(86vw,500px);
+    }
+
+    .home-page .hero{
+        margin-bottom:2.2rem;
+    }
+
+    .home-page .hero h1,
+    .home-page .location{
+        transform:none;
+    }
+
+    .home-page .page > hr:nth-of-type(1),
+    .home-page .page > hr:nth-of-type(2),
+    .home-page .page > hr:nth-of-type(3){
+        width:100%;
+    }
+
+    .home-page .page > hr:nth-of-type(1){
+        margin:1.55rem 0 1.8rem;
+    }
+
+    .home-page .page > hr:nth-of-type(2){
+        margin:2rem 0 1.85rem;
+    }
+
+    .home-page .page > hr:nth-of-type(3){
+        margin:2.15rem 0 1.35rem;
+    }
+
     .index-link{
         margin-bottom:3rem;
     }
@@ -273,9 +391,30 @@ footer a{
         transform:none;
     }
 
+    .home-page .projects{
+        transform:none;
+    }
+
+    .home-page .projects li:nth-child(even),
+    .home-page .projects li:nth-child(3){
+        padding-left:0;
+    }
+
     .title{
         font-size:1.18rem;
         letter-spacing:.035em;
+    }
+
+    .home-page .title{
+        font-size:1.18rem;
+    }
+
+    .home-page .about{
+        margin-left:0;
+    }
+
+    .home-page footer nav{
+        justify-content:flex-start;
     }
 
     .projects li{
