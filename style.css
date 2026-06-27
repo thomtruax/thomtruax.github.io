@@ -233,19 +233,22 @@ footer a{
 
 .home-page .page{
     width:min(82vw,620px);
+    margin:clamp(3.6rem,7vw,5.15rem) auto clamp(2.4rem,5vw,3.65rem);
+    --home-left-inset:clamp(.9rem,2.2vw,1.45rem);
+    --home-right-offset:clamp(1.45rem,4.2vw,2.35rem);
 }
 
 .home-page .hero{
-    margin-bottom:2.2rem;
+    margin-bottom:2rem;
 }
 
 .home-page .hero h1,
 .home-page .location{
-    transform:translateX(clamp(1.7rem,4.6vw,2.65rem));
+    transform:translateX(var(--home-right-offset));
 }
 
 .home-page .hero h1{
-    font-size:clamp(2.05rem,4.6vw,2.3rem);
+    font-size:clamp(1.94rem,4.25vw,2.15rem);
     letter-spacing:.095em;
 }
 
@@ -254,23 +257,24 @@ footer a{
 }
 
 .home-page .page > hr:nth-of-type(1){
-    width:68%;
-    margin:1.55rem 0 2.05rem auto;
+    width:64%;
+    margin:1.35rem 0 1.75rem auto;
 }
 
 .home-page .page > hr:nth-of-type(2){
-    width:68%;
-    margin:2.25rem auto 2.05rem 0;
+    width:64%;
+    margin:2.05rem auto 1.7rem 0;
+    transform:translateX(var(--home-left-inset));
 }
 
 .home-page .page > hr:nth-of-type(3){
-    width:38%;
-    margin:2.35rem 0 1.3rem auto;
+    width:34%;
+    margin:1.9rem 0 1.15rem auto;
 }
 
 .home-page .projects{
     transform:none;
-    padding-left:clamp(.85rem,2vw,1.35rem);
+    padding-left:var(--home-left-inset);
 }
 
 .home-page .projects a,
@@ -283,12 +287,12 @@ footer a{
 }
 
 .home-page .projects li{
-    margin-bottom:1.86rem;
+    margin-bottom:1.58rem;
 }
 
 .home-page .title{
-    font-size:1.26rem;
-    letter-spacing:.035em;
+    font-size:1.2rem;
+    letter-spacing:.032em;
 }
 
 .home-page .medium{
@@ -299,13 +303,13 @@ footer a{
     max-width:25.5rem;
     margin-left:auto;
     text-align:right;
-    transform:translateX(clamp(.8rem,2.4vw,1.6rem));
+    transform:translateX(var(--home-right-offset));
 }
 
 .home-page .about p{
     color:#403b36;
     font-size:.92rem;
-    line-height:1.62;
+    line-height:1.56;
     letter-spacing:.01em;
 }
 
@@ -380,6 +384,7 @@ footer a{
 
     .home-page .page > hr:nth-of-type(2){
         margin:2rem 0 1.85rem;
+        transform:none;
     }
 
     .home-page .page > hr:nth-of-type(3){
