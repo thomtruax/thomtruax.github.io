@@ -244,6 +244,10 @@ footer a{
     transform:translateX(clamp(2.1rem,5.4vw,3.1rem));
 }
 
+.home-page .hero h1{
+    font-size:clamp(2.05rem,4.6vw,2.3rem);
+}
+
 .home-page .page > hr{
     border-color:#d7cec2;
 }
@@ -278,11 +282,11 @@ footer a{
 }
 
 .home-page .projects li{
-    margin-bottom:1.42rem;
+    margin-bottom:1.78rem;
 }
 
 .home-page .title{
-    font-size:1.38rem;
+    font-size:1.29rem;
     letter-spacing:.04em;
 }
 
@@ -298,7 +302,7 @@ footer a{
 .home-page .about p{
     color:#403b36;
     font-size:.94rem;
-    line-height:1.9;
+    line-height:1.72;
 }
 
 .home-page footer{
@@ -354,6 +358,10 @@ footer a{
         transform:none;
     }
 
+    .home-page .hero h1{
+        font-size:1.86rem;
+    }
+
     .home-page .page > hr:nth-of-type(1),
     .home-page .page > hr:nth-of-type(2),
     .home-page .page > hr:nth-of-type(3){
@@ -395,7 +403,7 @@ footer a{
     }
 
     .home-page .title{
-        font-size:1.18rem;
+        font-size:1.1rem;
     }
 
     .home-page .about{
@@ -407,7 +415,7 @@ footer a{
     }
 
     .projects li{
-        margin-bottom:1.05rem;
+        margin-bottom:1.32rem;
     }
 
     footer nav{
