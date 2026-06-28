@@ -1341,11 +1341,12 @@ footer a{
     background:
         radial-gradient(circle at 23% 60%,rgba(255,167,73,.95) 0 .08rem,rgba(255,167,73,.38) .1rem .24rem,transparent .55rem),
         radial-gradient(circle at 18% 72%,rgba(255,201,122,.84) 0 .08rem,rgba(255,201,122,.34) .1rem .22rem,transparent .48rem),
-        radial-gradient(ellipse at 39% 33%,rgba(255,137,68,.34),transparent 14rem),
-        radial-gradient(ellipse at 66% 14%,rgba(53,139,255,.5),transparent 22rem),
-        radial-gradient(ellipse at 81% 31%,rgba(34,98,191,.4),transparent 24rem),
-        radial-gradient(ellipse at 49% 24%,rgba(255,255,255,.22),transparent 13rem),
-        radial-gradient(ellipse at 55% 48%,rgba(83,132,216,.18),transparent 24rem),
+        radial-gradient(ellipse at 31% 35%,rgba(255,123,44,.46),transparent 15rem),
+        radial-gradient(ellipse at 44% 28%,rgba(255,226,198,.22),transparent 11rem),
+        radial-gradient(ellipse at 63% 14%,rgba(53,139,255,.56),transparent 22rem),
+        radial-gradient(ellipse at 82% 31%,rgba(34,98,191,.46),transparent 26rem),
+        radial-gradient(ellipse at 50% 21%,rgba(255,255,255,.18),transparent 14rem),
+        radial-gradient(ellipse at 55% 48%,rgba(83,132,216,.2),transparent 24rem),
         linear-gradient(128deg,rgba(7,15,31,.95),rgba(3,5,12,.88) 42%,rgba(2,2,8,.98));
     opacity:1;
 }
@@ -1361,16 +1362,20 @@ footer a{
         radial-gradient(circle at 88% 62%,rgba(255,141,91,.72) 0 .04rem,transparent .14rem),
         radial-gradient(circle at 91% 21%,rgba(220,237,255,.66) 0 .04rem,transparent .16rem),
         radial-gradient(circle at 68% 73%,rgba(255,250,230,.52) 0 .035rem,transparent .13rem),
-        radial-gradient(circle at 38% 76%,rgba(230,244,255,.54) 0 .035rem,transparent .13rem);
-    opacity:.5;
+        radial-gradient(circle at 38% 76%,rgba(230,244,255,.54) 0 .035rem,transparent .13rem),
+        radial-gradient(circle at 48% 34%,rgba(255,188,126,.44) 0 .03rem,transparent .12rem),
+        radial-gradient(circle at 62% 42%,rgba(210,231,255,.46) 0 .03rem,transparent .12rem),
+        radial-gradient(circle at 79% 48%,rgba(255,255,255,.42) 0 .03rem,transparent .12rem),
+        radial-gradient(circle at 12% 55%,rgba(255,205,160,.38) 0 .03rem,transparent .12rem);
+    opacity:.62;
 }
 
 .slay-canvas{
     height:100svh;
     padding:clamp(1.35rem,4vw,3.8rem);
     background:
-        linear-gradient(180deg,transparent 0 58%,rgba(4,2,9,.28) 76%,rgba(1,1,4,.9) 100%),
-        radial-gradient(ellipse at 50% 116%,rgba(255,45,153,.18),transparent 28rem);
+        radial-gradient(ellipse at 50% 104%,rgba(255,45,153,.2),transparent 22rem),
+        linear-gradient(180deg,rgba(0,0,0,.06) 0 54%,rgba(4,2,9,.34) 76%,rgba(1,1,4,.94) 100%);
 }
 
 .slay-header{
@@ -1423,8 +1428,8 @@ footer a{
     left:50%;
     bottom:clamp(1.6rem,6vh,4.2rem);
     z-index:5;
-    width:clamp(8rem,19vw,15.5rem);
-    height:clamp(3.6rem,8vw,6.4rem);
+    width:clamp(6.8rem,13vw,11rem);
+    height:clamp(3rem,5.8vw,4.8rem);
     transform:translateX(-50%);
     opacity:.88;
 }
@@ -1440,6 +1445,102 @@ footer a{
     clip-path:polygon(8% 32%,50% 0,92% 32%,100% 100%,0 100%);
     transform:translateX(-50%);
     box-shadow:0 0 1.3rem rgba(0,0,0,.9);
+}
+
+.zombie-field{
+    position:absolute;
+    left:50%;
+    bottom:-.18rem;
+    z-index:0;
+    width:168%;
+    height:100%;
+    transform:translateX(-50%);
+    pointer-events:none;
+}
+
+.zombie{
+    --zx:50%;
+    --zy:60%;
+    --zs:1;
+    --zr:0deg;
+    position:absolute;
+    left:var(--zx);
+    top:var(--zy);
+    width:.82rem;
+    height:1.75rem;
+    border-radius:45% 45% 18% 18%;
+    background:linear-gradient(180deg,rgba(24,27,22,.82),rgba(3,3,4,.96));
+    box-shadow:0 0 .55rem rgba(255,56,148,.12);
+    opacity:.62;
+    transform:translate(-50%,-50%) rotate(var(--zr)) scale(var(--zs));
+}
+
+.zombie::before{
+    content:"";
+    position:absolute;
+    left:50%;
+    top:-.42rem;
+    width:.62rem;
+    height:.62rem;
+    border-radius:50%;
+    background:rgba(25,31,22,.88);
+    box-shadow:inset .12rem -.05rem 0 rgba(96,121,81,.3);
+    transform:translateX(-50%);
+}
+
+.zombie::after{
+    content:"";
+    position:absolute;
+    left:-.72rem;
+    top:.32rem;
+    width:2.25rem;
+    height:.16rem;
+    background:linear-gradient(90deg,rgba(103,124,91,.58),rgba(16,18,15,.82));
+    border-radius:999px;
+    transform:rotate(var(--arm,.14turn));
+    transform-origin:78% center;
+}
+
+.zombie-one{
+    --zx:14%;
+    --zy:66%;
+    --zs:.84;
+    --zr:-9deg;
+    --arm:.06turn;
+}
+
+.zombie-two{
+    --zx:30%;
+    --zy:76%;
+    --zs:.7;
+    --zr:7deg;
+    --arm:-.08turn;
+    opacity:.5;
+}
+
+.zombie-three{
+    --zx:71%;
+    --zy:71%;
+    --zs:.78;
+    --zr:8deg;
+    --arm:.44turn;
+}
+
+.zombie-four{
+    --zx:88%;
+    --zy:61%;
+    --zs:.92;
+    --zr:11deg;
+    --arm:.53turn;
+}
+
+.zombie-five{
+    --zx:55%;
+    --zy:88%;
+    --zs:.56;
+    --zr:-3deg;
+    --arm:.03turn;
+    opacity:.38;
 }
 
 .pony-roof{
@@ -1461,7 +1562,7 @@ footer a{
     align-items:center;
     color:#ff5aa8;
     font-family:var(--sans);
-    font-size:clamp(.78rem,1.8vw,1.35rem);
+    font-size:clamp(.66rem,1.28vw,1rem);
     font-weight:900;
     letter-spacing:.06em;
     line-height:.9;
@@ -1530,7 +1631,7 @@ footer a{
 
     .pink-pony-club{
         bottom:clamp(2.1rem,7vh,4rem);
-        width:clamp(8.5rem,42vw,12rem);
+        width:clamp(7.3rem,34vw,9.5rem);
     }
 }
 
