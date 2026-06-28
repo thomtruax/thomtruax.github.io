@@ -589,9 +589,9 @@ footer a{
     width:100vw;
     height:100svh;
     margin:0;
-    opacity:.74;
+    opacity:.86;
     overflow:hidden;
-    filter:saturate(.82) contrast(1.04) brightness(.58);
+    filter:saturate(.9) contrast(1.02) brightness(.78);
 }
 
 .mouth-image::after{
@@ -599,8 +599,8 @@ footer a{
     position:absolute;
     inset:0;
     background:
-        linear-gradient(90deg,rgba(5,3,2,.9),rgba(5,3,2,.22) 38%,rgba(5,3,2,.42)),
-        linear-gradient(0deg,rgba(5,3,2,.82),transparent 34%,rgba(5,3,2,.38));
+        linear-gradient(90deg,rgba(5,3,2,.72),rgba(5,3,2,.12) 38%,rgba(5,3,2,.3)),
+        linear-gradient(0deg,rgba(5,3,2,.62),transparent 36%,rgba(5,3,2,.25));
 }
 
 .mouth-image img{
