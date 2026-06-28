@@ -17,6 +17,7 @@ STYLE.CSS
     --mask-cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='24' viewBox='0 0 32 24'%3E%3Cpath d='M3 8 C7 3 12 5 16 8 C20 5 25 3 29 8 C27 15 22 19 16 17 C10 19 5 15 3 8 Z' fill='%23050505'/%3E%3Cellipse cx='11' cy='10' rx='3.2' ry='2.1' fill='%23fbfaf7'/%3E%3Cellipse cx='21' cy='10' rx='3.2' ry='2.1' fill='%23fbfaf7'/%3E%3Cpath d='M14 15 C15 16 17 16 18 15' stroke='%23b08a55' stroke-width='1' fill='none'/%3E%3C/svg%3E") 16 12;
     --lipstick-cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='32' viewBox='0 0 28 32'%3E%3Cpath d='M13 2 L20 7 L16 14 L8 9 Z' fill='%23c43b71'/%3E%3Cpath d='M8 9 L16 14 L12 22 L4 17 Z' fill='%23050505'/%3E%3Cpath d='M4 17 L12 22 L10 29 L1 24 Z' fill='%23fbfaf7' stroke='%23050505' stroke-width='1.4'/%3E%3Cpath d='M12 22 L20 27 L18 31 L10 29 Z' fill='%23050505'/%3E%3Cpath d='M10 5 L17 10' stroke='%23fbfaf7' stroke-width='1' opacity='.75'/%3E%3C/svg%3E") 7 25;
     --eggplant-cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cpath d='M21 8 C18 9 15 11 12 14 C6 20 5 29 10 34 C15 39 24 37 30 31 C34 27 36 23 35 18 C34 13 27 6 21 8 Z' fill='%235b2a86'/%3E%3Cpath d='M16 13 C10 18 8 27 12 31 C16 35 25 33 30 27 C32 25 33 22 33 20 C30 24 27 28 22 31 C17 34 13 33 11 30 C8 25 10 18 16 13 Z' fill='%238a4fc4' opacity='.95'/%3E%3Cpath d='M21 9 C22 5 25 3 29 4 C28 7 26 9 23 10 C26 9 30 9 34 12 C30 14 26 14 23 11 C24 14 23 17 20 20 C18 16 18 12 21 9 Z' fill='%23418a39'/%3E%3Cpath d='M25 4 C26 6 25 9 22 11' stroke='%23b5d74a' stroke-width='1.6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") 10 30;
+    --moon-cursor:url("assets/moon-cursor.png") 32 32;
 }
 
 *,
@@ -333,7 +334,12 @@ footer a{
 /* Homepage Composition */
 
 .home-page{
+    cursor:var(--moon-cursor),auto;
     overflow:hidden;
+}
+
+.home-page a{
+    cursor:var(--moon-cursor),pointer;
 }
 
 .home-page .page{
