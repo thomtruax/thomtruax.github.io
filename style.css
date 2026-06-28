@@ -1337,7 +1337,7 @@ footer a{
 }
 
 .slay-page::before{
-    background-image:url("assets/slay-hero-reference.png");
+    background-image:url("assets/slay-hero-reference-v2.png");
     background-position:center bottom;
     background-repeat:no-repeat;
     background-size:cover;
@@ -1363,11 +1363,11 @@ footer a{
 .slay-horizon-whisper{
     position:absolute;
     left:50%;
-    bottom:clamp(1.45rem,3.7vh,2.6rem);
+    bottom:clamp(1.35rem,3.4vh,2.35rem);
     z-index:3;
-    width:clamp(6.25rem,8.6vw,8.25rem);
-    height:clamp(1.9rem,3vw,3.1rem);
-    opacity:.44;
+    width:clamp(6rem,8vw,7.8rem);
+    height:clamp(1.85rem,2.8vw,2.9rem);
+    opacity:.52;
     pointer-events:none;
     transform:translateX(-50%);
 }
@@ -1376,16 +1376,16 @@ footer a{
     position:absolute;
     left:50%;
     bottom:36%;
-    width:32%;
-    height:.36rem;
+    width:36%;
+    height:.4rem;
     border-radius:999px;
-    background:rgba(255,56,161,.09);
+    background:rgba(255,56,161,.13);
     box-shadow:
-        0 0 .18rem rgba(255,56,161,.15),
-        0 0 .58rem rgba(255,56,161,.1),
-        0 0 .95rem rgba(255,56,161,.06);
+        0 0 .22rem rgba(255,56,161,.24),
+        0 0 .72rem rgba(255,56,161,.18),
+        0 0 1.15rem rgba(255,56,161,.1);
     transform:translateX(-50%);
-    animation:slay-neon-breath 9.5s ease-in-out infinite;
+    animation:slay-neon-breath 7.75s steps(1,end) infinite;
 }
 
 .slay-star-pulse{
@@ -1400,19 +1400,21 @@ footer a{
     --y:30%;
     --s:1;
     --delay:0s;
+    --star-color:255,246,221;
+    --star-glow:255,166,87;
     position:absolute;
     left:var(--x);
     top:var(--y);
     width:.34rem;
     height:.34rem;
     border-radius:50%;
-    background:rgba(255,246,221,.68);
+    background:rgba(var(--star-color),.72);
     box-shadow:
-        0 0 .35rem rgba(255,246,221,.18),
-        0 0 .75rem rgba(255,166,87,.08);
-    opacity:.18;
+        0 0 .4rem rgba(var(--star-color),.28),
+        0 0 1rem rgba(var(--star-glow),.14);
+    opacity:.28;
     transform:translate(-50%,-50%) scale(var(--s));
-    animation:slay-star-faint 18s ease-in-out var(--delay) infinite;
+    animation:slay-star-faint 14s steps(1,end) var(--delay) infinite;
 }
 
 .slay-star::before,
@@ -1424,7 +1426,7 @@ footer a{
     width:220%;
     height:.035rem;
     border-radius:999px;
-    background:rgba(255,246,221,.18);
+    background:rgba(var(--star-color),.22);
     transform:translate(-50%,-50%);
 }
 
@@ -1434,31 +1436,39 @@ footer a{
 }
 
 .slay-star-one{
-    --x:24%;
-    --y:53%;
-    --s:.72;
+    --x:22.4%;
+    --y:66.8%;
+    --s:.78;
     --delay:-4s;
+    --star-color:255,246,221;
+    --star-glow:255,146,55;
 }
 
 .slay-star-two{
-    --x:31%;
-    --y:43%;
-    --s:.5;
+    --x:29.7%;
+    --y:47.4%;
+    --s:.48;
     --delay:-11s;
+    --star-color:255,223,183;
+    --star-glow:255,121,36;
 }
 
 .slay-star-three{
-    --x:67%;
-    --y:21%;
-    --s:.48;
+    --x:62.9%;
+    --y:66.2%;
+    --s:.52;
     --delay:-7s;
+    --star-color:177,220,255;
+    --star-glow:56,145,255;
 }
 
 .slay-star-four{
-    --x:78%;
-    --y:35%;
+    --x:75.1%;
+    --y:6.7%;
     --s:.42;
     --delay:-15s;
+    --star-color:166,215,255;
+    --star-glow:45,136,255;
 }
 
 .slay-zombie{
@@ -1535,53 +1545,78 @@ footer a{
 @keyframes slay-neon-breath{
     0%,
     100%{
-        opacity:.16;
+        opacity:.23;
     }
 
-    17%{
-        opacity:.34;
+    11%{
+        opacity:.5;
     }
 
-    22%{
+    13%{
         opacity:.13;
     }
 
-    48%{
-        opacity:.27;
+    14%{
+        opacity:.42;
     }
 
-    53%{
+    19%{
         opacity:.08;
     }
 
-    57%,
+    21%,
+    57%{
+        opacity:.36;
+    }
+
+    58%{
+        opacity:.18;
+    }
+
+    61%{
+        opacity:.46;
+    }
+
     76%{
-        opacity:.22;
+        opacity:.25;
     }
 }
 
 @keyframes slay-star-faint{
     0%,
     100%{
-        opacity:.1;
-        transform:translate(-50%,-50%) scale(calc(var(--s) * .88));
+        opacity:.18;
+        transform:translate(-50%,-50%) scale(calc(var(--s) * .92));
     }
 
-    29%{
-        opacity:.16;
+    18%{
+        opacity:.28;
     }
 
-    36%{
-        opacity:.34;
-        transform:translate(-50%,-50%) scale(calc(var(--s) * 1.08));
+    19%{
+        opacity:.62;
+        transform:translate(-50%,-50%) scale(calc(var(--s) * 1.18));
     }
 
-    42%{
+    20%{
         opacity:.13;
     }
 
-    73%{
-        opacity:.24;
+    21%{
+        opacity:.48;
+    }
+
+    59%{
+        opacity:.23;
+    }
+
+    60%{
+        opacity:.55;
+        transform:translate(-50%,-50%) scale(calc(var(--s) * 1.1));
+    }
+
+    63%{
+        opacity:.2;
     }
 }
 
@@ -1609,7 +1644,7 @@ footer a{
 
     .slay-horizon-whisper{
         bottom:clamp(1.9rem,5.5vh,3.1rem);
-        width:clamp(5rem,20vw,6.75rem);
+        width:clamp(5rem,19vw,6.5rem);
     }
 }
 
