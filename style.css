@@ -1330,6 +1330,210 @@ footer a{
     }
 }
 
+/* Slay of the Dead - cosmos direction */
+
+.slay-page{
+    background:#03050c;
+    color:#fff7ed;
+}
+
+.slay-page::before{
+    background:
+        radial-gradient(circle at 23% 60%,rgba(255,167,73,.95) 0 .08rem,rgba(255,167,73,.38) .1rem .24rem,transparent .55rem),
+        radial-gradient(circle at 18% 72%,rgba(255,201,122,.84) 0 .08rem,rgba(255,201,122,.34) .1rem .22rem,transparent .48rem),
+        radial-gradient(ellipse at 39% 33%,rgba(255,137,68,.34),transparent 14rem),
+        radial-gradient(ellipse at 66% 14%,rgba(53,139,255,.5),transparent 22rem),
+        radial-gradient(ellipse at 81% 31%,rgba(34,98,191,.4),transparent 24rem),
+        radial-gradient(ellipse at 49% 24%,rgba(255,255,255,.22),transparent 13rem),
+        radial-gradient(ellipse at 55% 48%,rgba(83,132,216,.18),transparent 24rem),
+        linear-gradient(128deg,rgba(7,15,31,.95),rgba(3,5,12,.88) 42%,rgba(2,2,8,.98));
+    opacity:1;
+}
+
+.slay-page::after{
+    background:
+        radial-gradient(circle at 15% 23%,rgba(255,171,76,.85) 0 .06rem,transparent .18rem),
+        radial-gradient(circle at 25% 41%,rgba(255,221,181,.72) 0 .045rem,transparent .15rem),
+        radial-gradient(circle at 34% 19%,rgba(255,235,212,.68) 0 .04rem,transparent .14rem),
+        radial-gradient(circle at 45% 12%,rgba(255,255,255,.7) 0 .04rem,transparent .15rem),
+        radial-gradient(circle at 56% 55%,rgba(255,255,255,.7) 0 .045rem,transparent .15rem),
+        radial-gradient(circle at 73% 18%,rgba(214,233,255,.9) 0 .06rem,transparent .18rem),
+        radial-gradient(circle at 88% 62%,rgba(255,141,91,.72) 0 .04rem,transparent .14rem),
+        radial-gradient(circle at 91% 21%,rgba(220,237,255,.66) 0 .04rem,transparent .16rem),
+        radial-gradient(circle at 68% 73%,rgba(255,250,230,.52) 0 .035rem,transparent .13rem),
+        radial-gradient(circle at 38% 76%,rgba(230,244,255,.54) 0 .035rem,transparent .13rem);
+    opacity:.5;
+}
+
+.slay-canvas{
+    height:100svh;
+    padding:clamp(1.35rem,4vw,3.8rem);
+    background:
+        linear-gradient(180deg,transparent 0 58%,rgba(4,2,9,.28) 76%,rgba(1,1,4,.9) 100%),
+        radial-gradient(ellipse at 50% 116%,rgba(255,45,153,.18),transparent 28rem);
+}
+
+.slay-header{
+    position:absolute;
+    left:50%;
+    top:42%;
+    z-index:6;
+    width:min(62vw,31rem);
+    text-align:center;
+    transform:translate(-50%,-50%);
+    mix-blend-mode:normal;
+}
+
+.slay-header h1{
+    font-family:var(--condensed);
+    font-size:clamp(4.6rem,9.6vw,9.4rem);
+    font-weight:900;
+    letter-spacing:.015em;
+    line-height:.77;
+    color:#f5efe4;
+    opacity:.97;
+    text-shadow:
+        0 .08rem .04rem rgba(0,0,0,.72),
+        0 0 2.6rem rgba(255,245,230,.18);
+}
+
+.slay-header h1 span{
+    display:block;
+    margin:.05em 0 .03em;
+    color:#f5efe4;
+    font-size:.34em;
+    letter-spacing:.02em;
+    line-height:.82;
+}
+
+.slay-header h1 em{
+    display:block;
+    margin-top:.18em;
+    color:#ff5da5;
+    font-family:var(--sans);
+    font-size:.2em;
+    font-style:normal;
+    font-weight:900;
+    letter-spacing:.08em;
+    line-height:1;
+}
+
+.pink-pony-club{
+    position:absolute;
+    left:50%;
+    bottom:clamp(1.6rem,6vh,4.2rem);
+    z-index:5;
+    width:clamp(8rem,19vw,15.5rem);
+    height:clamp(3.6rem,8vw,6.4rem);
+    transform:translateX(-50%);
+    opacity:.88;
+}
+
+.pink-pony-club::before{
+    content:"";
+    position:absolute;
+    left:50%;
+    bottom:0;
+    width:100%;
+    height:54%;
+    background:linear-gradient(180deg,rgba(8,5,10,.9),rgba(0,0,0,.98));
+    clip-path:polygon(8% 32%,50% 0,92% 32%,100% 100%,0 100%);
+    transform:translateX(-50%);
+    box-shadow:0 0 1.3rem rgba(0,0,0,.9);
+}
+
+.pony-roof{
+    position:absolute;
+    left:50%;
+    bottom:31%;
+    width:86%;
+    height:.45rem;
+    background:rgba(0,0,0,.92);
+    transform:translateX(-50%);
+}
+
+.pony-neon{
+    position:absolute;
+    left:50%;
+    bottom:17%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    color:#ff5aa8;
+    font-family:var(--sans);
+    font-size:clamp(.78rem,1.8vw,1.35rem);
+    font-weight:900;
+    letter-spacing:.06em;
+    line-height:.9;
+    text-align:center;
+    text-transform:uppercase;
+    transform:translateX(-50%);
+    text-shadow:
+        0 0 .25rem rgba(255,95,174,.95),
+        0 0 .7rem rgba(255,38,145,.82),
+        0 0 1.4rem rgba(255,38,145,.55);
+    animation:pony-neon-flicker 4.8s infinite;
+}
+
+.pony-neon span:first-child{
+    font-size:.82em;
+}
+
+.pony-neon span:last-child{
+    margin-top:.16rem;
+}
+
+@keyframes pony-neon-flicker{
+    0%,
+    8%,
+    12%,
+    34%,
+    38%,
+    100%{
+        opacity:1;
+    }
+
+    9%,
+    35%{
+        opacity:.38;
+    }
+
+    10%,
+    36%{
+        opacity:.8;
+    }
+}
+
+@media (max-width:760px){
+    .slay-page::before{
+        background:
+            radial-gradient(circle at 28% 58%,rgba(255,167,73,.74) 0 .08rem,rgba(255,167,73,.28) .1rem .24rem,transparent .55rem),
+            radial-gradient(ellipse at 52% 23%,rgba(255,255,255,.24),transparent 8rem),
+            radial-gradient(ellipse at 70% 17%,rgba(38,126,230,.42),transparent 14rem),
+            radial-gradient(ellipse at 26% 34%,rgba(255,152,78,.3),transparent 7rem),
+            radial-gradient(ellipse at 53% 55%,rgba(73,114,205,.16),transparent 18rem),
+            linear-gradient(130deg,rgba(7,15,31,.95),rgba(3,5,12,.92) 48%,rgba(2,2,8,.98));
+    }
+
+    .slay-canvas{
+        padding:1.35rem;
+    }
+
+    .slay-header{
+        top:42%;
+        width:min(82vw,23rem);
+    }
+
+    .slay-header h1{
+        font-size:clamp(4rem,19vw,6.4rem);
+    }
+
+    .pink-pony-club{
+        bottom:clamp(2.1rem,7vh,4rem);
+        width:clamp(8.5rem,42vw,12rem);
+    }
+}
+
 @media (prefers-reduced-motion:reduce){
     *,
     *::before,
