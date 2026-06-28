@@ -1368,7 +1368,7 @@ footer a{
     mix-blend-mode:screen;
     opacity:.12;
     transform:translate3d(0,0,0) scale(1);
-    animation:slay-nebula-current 28s ease-in-out infinite;
+    animation:slay-nebula-current 18s ease-in-out infinite;
 }
 
 .slay-nebula-map{
@@ -1383,12 +1383,12 @@ footer a{
     fill:none;
     stroke-linecap:round;
     stroke-linejoin:round;
-    stroke-width:.24;
-    stroke-dasharray:4 15;
+    stroke-width:.28;
+    stroke-dasharray:5 18;
     stroke-dashoffset:34;
     opacity:.52;
     filter:blur(.07rem);
-    animation:slay-current-travel 26s ease-in-out infinite;
+    animation:slay-current-travel 18s ease-in-out infinite;
 }
 
 .slay-current-orange{
@@ -1415,6 +1415,69 @@ footer a{
     animation-duration:41s;
     animation-delay:-19s;
     opacity:.25;
+}
+
+.slay-current-title{
+    stroke-width:.34;
+    stroke-dasharray:6 20;
+    opacity:.65;
+    filter:blur(.045rem);
+    animation:slay-current-to-title 18s ease-in-out infinite;
+}
+
+.slay-current-title-left{
+    animation-delay:-1.2s;
+}
+
+.slay-current-title-right{
+    animation-delay:-3.4s;
+}
+
+.slay-title-charge{
+    position:absolute;
+    left:50%;
+    top:45.2%;
+    z-index:4;
+    width:min(38rem,45vw);
+    height:min(13rem,16vw);
+    border-radius:50%;
+    background:
+        radial-gradient(ellipse at 40% 45%,rgba(255,143,49,.22),transparent 42%),
+        radial-gradient(ellipse at 61% 42%,rgba(88,172,255,.22),transparent 45%),
+        radial-gradient(ellipse at 50% 51%,rgba(255,255,236,.12),transparent 54%);
+    filter:blur(.7rem);
+    mix-blend-mode:screen;
+    opacity:.1;
+    pointer-events:none;
+    transform:translate(-50%,-50%) scale(.96);
+    animation:slay-title-anoint 18s ease-in-out infinite;
+}
+
+.slay-energy-descent{
+    position:absolute;
+    left:50%;
+    top:53%;
+    z-index:4;
+    width:.18rem;
+    height:38%;
+    border-radius:999px;
+    background:linear-gradient(
+        to bottom,
+        rgba(255,236,190,0),
+        rgba(255,236,190,.42) 16%,
+        rgba(255,80,176,.24) 68%,
+        rgba(255,73,173,0)
+    );
+    box-shadow:
+        0 0 .45rem rgba(255,230,181,.4),
+        0 0 1.2rem rgba(255,78,175,.2);
+    filter:blur(.04rem);
+    mix-blend-mode:screen;
+    opacity:0;
+    pointer-events:none;
+    transform:translateX(-50%) scaleY(.18);
+    transform-origin:top center;
+    animation:slay-energy-descent 18s ease-in-out infinite;
 }
 
 .slay-horizon-whisper{
@@ -1444,7 +1507,7 @@ footer a{
     mix-blend-mode:screen;
     opacity:.58;
     transform:translate(-50%,-50%);
-    animation:slay-neon-breath 8.5s steps(1,end) infinite;
+    animation:slay-neon-breath 18s steps(1,end) infinite;
 }
 
 .slay-star-pulse{
@@ -1590,59 +1653,63 @@ footer a{
 @keyframes slay-neon-breath{
     0%,
     100%{
-        opacity:.5;
+        opacity:.38;
         box-shadow:
             0 0 .25rem rgba(255,73,173,.56),
             0 0 .85rem rgba(255,73,173,.3),
             0 0 1.5rem rgba(255,73,173,.14);
     }
 
-    28%{
-        opacity:.7;
-        box-shadow:
-            0 0 .32rem rgba(255,73,173,.72),
-            0 0 1rem rgba(255,73,173,.42),
-            0 0 1.8rem rgba(255,73,173,.22);
+    18%{
+        opacity:.44;
     }
 
-    30%{
-        opacity:.2;
+    41%{
+        opacity:.55;
+    }
+
+    52%{
+        opacity:.95;
+        box-shadow:
+            0 0 .42rem rgba(255,73,173,.9),
+            0 0 1.25rem rgba(255,73,173,.62),
+            0 0 2.6rem rgba(255,73,173,.34);
+    }
+
+    54%{
+        opacity:.26;
         box-shadow:
             0 0 .12rem rgba(255,73,173,.28),
             0 0 .35rem rgba(255,73,173,.14),
             0 0 .72rem rgba(255,73,173,.07);
     }
 
-    31%{
-        opacity:.58;
+    55%{
+        opacity:.82;
         box-shadow:
-            0 0 .25rem rgba(255,73,173,.6),
-            0 0 .82rem rgba(255,73,173,.34),
-            0 0 1.45rem rgba(255,73,173,.16);
+            0 0 .36rem rgba(255,73,173,.78),
+            0 0 1.1rem rgba(255,73,173,.48),
+            0 0 2.1rem rgba(255,73,173,.24);
     }
 
-    67%{
-        opacity:.54;
+    57%{
+        opacity:.36;
     }
 
-    68%{
-        opacity:.18;
-        box-shadow:
-            0 0 .08rem rgba(255,73,173,.22),
-            0 0 .24rem rgba(255,73,173,.12),
-            0 0 .44rem rgba(255,73,173,.06);
+    59%{
+        opacity:.74;
     }
 
-    69%{
-        opacity:.56;
+    70%{
+        opacity:.48;
     }
 
-    72%{
-        opacity:.34;
+    73%{
+        opacity:.25;
     }
 
     74%{
-        opacity:.58;
+        opacity:.5;
     }
 }
 
@@ -1697,13 +1764,17 @@ footer a{
     }
 
     35%{
-        opacity:.13;
+        opacity:.18;
         transform:translate3d(.4rem,-.28rem,0) scale(1.012);
         filter:blur(1.05rem);
     }
 
+    48%{
+        opacity:.14;
+    }
+
     64%{
-        opacity:.09;
+        opacity:.08;
         transform:translate3d(-.32rem,.22rem,0) scale(1.006);
         filter:blur(1.35rem);
     }
@@ -1713,17 +1784,108 @@ footer a{
     0%,
     100%{
         stroke-dashoffset:34;
-        opacity:.18;
+        opacity:.16;
+    }
+
+    28%{
+        stroke-dashoffset:15;
+        opacity:.54;
     }
 
     42%{
-        stroke-dashoffset:10;
-        opacity:.5;
+        stroke-dashoffset:-4;
+        opacity:.82;
     }
 
     68%{
-        stroke-dashoffset:-8;
-        opacity:.26;
+        stroke-dashoffset:-22;
+        opacity:.24;
+    }
+}
+
+@keyframes slay-current-to-title{
+    0%,
+    100%{
+        stroke-dashoffset:42;
+        opacity:.08;
+    }
+
+    18%{
+        opacity:.24;
+    }
+
+    35%{
+        stroke-dashoffset:8;
+        opacity:.74;
+    }
+
+    45%{
+        stroke-dashoffset:-12;
+        opacity:.9;
+    }
+
+    58%{
+        stroke-dashoffset:-32;
+        opacity:.16;
+    }
+}
+
+@keyframes slay-title-anoint{
+    0%,
+    100%{
+        opacity:.04;
+        transform:translate(-50%,-50%) scale(.96);
+    }
+
+    30%{
+        opacity:.12;
+    }
+
+    43%{
+        opacity:.42;
+        transform:translate(-50%,-50%) scale(1.04);
+    }
+
+    51%{
+        opacity:.28;
+    }
+
+    62%{
+        opacity:.08;
+        transform:translate(-50%,-50%) scale(1);
+    }
+}
+
+@keyframes slay-energy-descent{
+    0%,
+    100%{
+        opacity:0;
+        transform:translateX(-50%) scaleY(.08);
+    }
+
+    41%{
+        opacity:0;
+        transform:translateX(-50%) scaleY(.08);
+    }
+
+    48%{
+        opacity:.42;
+        transform:translateX(-50%) scaleY(.55);
+    }
+
+    53%{
+        opacity:.86;
+        transform:translateX(-50%) scaleY(1);
+    }
+
+    60%{
+        opacity:.16;
+        transform:translateX(-50%) scaleY(.86);
+    }
+
+    67%{
+        opacity:0;
+        transform:translateX(-50%) scaleY(.12);
     }
 }
 
@@ -1771,15 +1933,27 @@ footer a{
     }
 
     .slay-nebula-energy{
-        animation:slay-nebula-current 28s ease-in-out infinite !important;
+        animation:slay-nebula-current 18s ease-in-out infinite !important;
     }
 
     .slay-current{
-        animation:slay-current-travel 26s ease-in-out infinite !important;
+        animation:slay-current-travel 18s ease-in-out infinite !important;
+    }
+
+    .slay-current-title{
+        animation:slay-current-to-title 18s ease-in-out infinite !important;
+    }
+
+    .slay-title-charge{
+        animation:slay-title-anoint 18s ease-in-out infinite !important;
+    }
+
+    .slay-energy-descent{
+        animation:slay-energy-descent 18s ease-in-out infinite !important;
     }
 
     .slay-neon-breath{
-        animation:slay-neon-breath 8.5s steps(1,end) infinite !important;
+        animation:slay-neon-breath 18s steps(1,end) infinite !important;
     }
 
     .slay-star{
