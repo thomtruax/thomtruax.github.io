@@ -1338,14 +1338,20 @@ footer a{
 
 .slay-page::before{
     background-image:url("assets/slay-hero-reference.png");
-    background-position:center center;
+    background-position:center bottom;
     background-repeat:no-repeat;
-    background-size:contain;
+    background-size:cover;
     opacity:1;
 }
 
 .slay-page::after{
-    display:none;
+    display:block;
+    background:
+        radial-gradient(ellipse at 36% 30%,rgba(255,118,42,.08),transparent 18rem),
+        radial-gradient(ellipse at 70% 25%,rgba(64,144,255,.055),transparent 24rem);
+    mix-blend-mode:screen;
+    opacity:.07;
+    animation:slay-cosmic-breath 26s ease-in-out infinite;
 }
 
 .slay-canvas{
@@ -1354,9 +1360,158 @@ footer a{
     background:none;
 }
 
+.slay-horizon-whisper{
+    position:absolute;
+    left:50%;
+    bottom:clamp(1.45rem,3.7vh,2.6rem);
+    z-index:3;
+    width:clamp(7.5rem,10.5vw,10rem);
+    height:clamp(2.25rem,3.7vw,3.75rem);
+    opacity:.58;
+    pointer-events:none;
+    transform:translateX(-50%);
+}
+
+.slay-neon-breath{
+    position:absolute;
+    left:50%;
+    bottom:36%;
+    width:38%;
+    height:.48rem;
+    border-radius:999px;
+    background:rgba(255,56,161,.12);
+    box-shadow:
+        0 0 .22rem rgba(255,56,161,.18),
+        0 0 .72rem rgba(255,56,161,.13),
+        0 0 1.2rem rgba(255,56,161,.08);
+    transform:translateX(-50%);
+    animation:slay-neon-breath 8.5s ease-in-out infinite;
+}
+
+.slay-zombie{
+    --x:50%;
+    --y:80%;
+    --s:1;
+    --arm:.04turn;
+    position:absolute;
+    left:var(--x);
+    top:var(--y);
+    width:.24rem;
+    height:.58rem;
+    border-radius:45% 45% 18% 18%;
+    background:rgba(2,4,4,.78);
+    box-shadow:0 0 .18rem rgba(255,44,148,.035);
+    opacity:.18;
+    transform:translate(-50%,-50%) scale(var(--s));
+}
+
+.slay-zombie::before{
+    content:"";
+    position:absolute;
+    left:50%;
+    top:-.17rem;
+    width:.2rem;
+    height:.2rem;
+    border-radius:50%;
+    background:rgba(2,4,4,.74);
+    transform:translateX(-50%);
+}
+
+.slay-zombie::after{
+    content:"";
+    position:absolute;
+    left:-.23rem;
+    top:.15rem;
+    width:.62rem;
+    height:.045rem;
+    background:rgba(2,4,4,.58);
+    transform:rotate(var(--arm));
+    transform-origin:80% center;
+}
+
+.slay-zombie-one{
+    --x:7%;
+    --y:76%;
+    --s:.85;
+    --arm:.03turn;
+}
+
+.slay-zombie-two{
+    --x:22%;
+    --y:86%;
+    --s:.68;
+    --arm:-.08turn;
+    opacity:.13;
+}
+
+.slay-zombie-three{
+    --x:78%;
+    --y:84%;
+    --s:.74;
+    --arm:.47turn;
+    opacity:.15;
+}
+
+.slay-zombie-four{
+    --x:94%;
+    --y:74%;
+    --s:.9;
+    --arm:.54turn;
+}
+
+@keyframes slay-neon-breath{
+    0%,
+    100%{
+        opacity:.24;
+    }
+
+    17%{
+        opacity:.42;
+    }
+
+    22%{
+        opacity:.2;
+    }
+
+    48%{
+        opacity:.36;
+    }
+
+    53%{
+        opacity:.16;
+    }
+
+    57%,
+    76%{
+        opacity:.31;
+    }
+}
+
+@keyframes slay-cosmic-breath{
+    0%,
+    100%{
+        opacity:.045;
+        transform:translate3d(0,0,0) scale(1);
+    }
+
+    44%{
+        opacity:.11;
+    }
+
+    63%{
+        opacity:.065;
+        transform:translate3d(.28rem,-.16rem,0) scale(1.012);
+    }
+}
+
 @media (max-width:760px){
     .slay-canvas{
         padding:1.35rem;
+    }
+
+    .slay-horizon-whisper{
+        bottom:clamp(1.9rem,5.5vh,3.1rem);
+        width:clamp(5.8rem,25vw,7.8rem);
     }
 }
 
