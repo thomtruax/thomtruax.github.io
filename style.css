@@ -567,7 +567,11 @@ footer a{
     content:"";
     position:fixed;
     inset:0;
-    background:linear-gradient(90deg,rgba(0,0,0,.3),transparent 28%,rgba(0,0,0,.38));
+    background:
+        radial-gradient(circle at 12% 42%,rgba(176,138,85,.08),transparent 12rem),
+        radial-gradient(circle at 86% 36%,rgba(176,138,85,.07),transparent 10rem),
+        linear-gradient(90deg,rgba(0,0,0,.2),transparent 30%,rgba(0,0,0,.28));
+    animation:mouth-candle-breathe 9s ease-in-out infinite alternate;
     pointer-events:none;
 }
 
@@ -589,9 +593,9 @@ footer a{
     width:100vw;
     height:100svh;
     margin:0;
-    opacity:.86;
+    opacity:.94;
     overflow:hidden;
-    filter:saturate(.9) contrast(1.02) brightness(.78);
+    filter:saturate(.94) contrast(1.01) brightness(.92);
 }
 
 .mouth-image::after{
@@ -599,8 +603,8 @@ footer a{
     position:absolute;
     inset:0;
     background:
-        linear-gradient(90deg,rgba(5,3,2,.72),rgba(5,3,2,.12) 38%,rgba(5,3,2,.3)),
-        linear-gradient(0deg,rgba(5,3,2,.62),transparent 36%,rgba(5,3,2,.25));
+        linear-gradient(90deg,rgba(5,3,2,.55),rgba(5,3,2,.08) 40%,rgba(5,3,2,.24)),
+        linear-gradient(0deg,rgba(5,3,2,.48),transparent 38%,rgba(5,3,2,.18));
 }
 
 .mouth-image img{
@@ -665,20 +669,23 @@ footer a{
 }
 
 .mouth-quote{
-    grid-column:6 / 12;
-    grid-row:5 / 9;
-    align-self:center;
+    grid-column:7 / 12;
+    grid-row:8 / 11;
+    align-self:start;
+    justify-self:end;
     margin:0;
 }
 
 .mouth-quote blockquote{
     margin:0;
     color:#f5ead8;
-    font-size:clamp(1.35rem,2.7vw,2.45rem);
+    opacity:.68;
+    font-size:clamp(1.05rem,2vw,1.8rem);
     font-style:italic;
     font-weight:500;
     letter-spacing:-.025em;
-    line-height:1.02;
+    line-height:1.08;
+    animation:mouth-quote-arrive 1.8s ease-out both;
 }
 
 @media (hover:hover){
@@ -725,11 +732,33 @@ footer a{
     }
 
     .mouth-quote{
+        margin-left:auto;
         margin-bottom:4.5rem;
+        max-width:18rem;
     }
 
     .mouth-quote blockquote{
-        font-size:clamp(1.75rem,8vw,3.2rem);
+        font-size:clamp(1.35rem,6.5vw,2.4rem);
+    }
+}
+
+@keyframes mouth-candle-breathe{
+    from{
+        opacity:.82;
+    }
+
+    to{
+        opacity:1;
+    }
+}
+
+@keyframes mouth-quote-arrive{
+    from{
+        opacity:0;
+    }
+
+    to{
+        opacity:.68;
     }
 }
 
@@ -738,5 +767,6 @@ footer a{
     *::before,
     *::after{
         transition:none !important;
+        animation:none !important;
     }
 }
