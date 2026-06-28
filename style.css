@@ -1366,9 +1366,9 @@ footer a{
         radial-gradient(ellipse at 66% 44%,rgba(96,182,255,.052),rgba(96,182,255,.026) 12%,transparent 28%);
     filter:blur(1rem);
     mix-blend-mode:screen;
-    opacity:.12;
+    opacity:.18;
     transform:translate3d(0,0,0) scale(1);
-    animation:slay-nebula-current 18s ease-in-out infinite;
+    animation:slay-nebula-current 10.5s ease-in-out infinite;
 }
 
 .slay-nebula-map{
@@ -1383,20 +1383,20 @@ footer a{
     fill:none;
     stroke-linecap:round;
     stroke-linejoin:round;
-    stroke-width:.28;
-    stroke-dasharray:5 18;
+    stroke-width:.38;
+    stroke-dasharray:7 15;
     stroke-dashoffset:34;
-    opacity:.52;
-    filter:blur(.07rem);
-    animation:slay-current-travel 18s ease-in-out infinite;
+    opacity:.7;
+    filter:blur(.045rem);
+    animation:slay-current-travel 10.5s ease-in-out infinite;
 }
 
 .slay-current-orange{
-    stroke:rgba(255,128,47,.78);
+    stroke:rgba(255,142,50,.95);
 }
 
 .slay-current-blue{
-    stroke:rgba(86,176,255,.72);
+    stroke:rgba(103,193,255,.92);
 }
 
 .slay-current-two{
@@ -1418,11 +1418,11 @@ footer a{
 }
 
 .slay-current-title{
-    stroke-width:.34;
-    stroke-dasharray:6 20;
-    opacity:.65;
-    filter:blur(.045rem);
-    animation:slay-current-to-title 18s ease-in-out infinite;
+    stroke-width:.48;
+    stroke-dasharray:8 15;
+    opacity:.82;
+    filter:blur(.025rem);
+    animation:slay-current-to-title 10.5s ease-in-out infinite;
 }
 
 .slay-current-title-left{
@@ -1444,13 +1444,13 @@ footer a{
     background:
         radial-gradient(ellipse at 40% 45%,rgba(255,143,49,.22),transparent 42%),
         radial-gradient(ellipse at 61% 42%,rgba(88,172,255,.22),transparent 45%),
-        radial-gradient(ellipse at 50% 51%,rgba(255,255,236,.12),transparent 54%);
-    filter:blur(.7rem);
+        radial-gradient(ellipse at 50% 51%,rgba(255,255,236,.2),transparent 54%);
+    filter:blur(.52rem);
     mix-blend-mode:screen;
-    opacity:.1;
+    opacity:.16;
     pointer-events:none;
     transform:translate(-50%,-50%) scale(.96);
-    animation:slay-title-anoint 18s ease-in-out infinite;
+    animation:slay-title-anoint 10.5s ease-in-out infinite;
 }
 
 .slay-energy-descent{
@@ -1458,26 +1458,26 @@ footer a{
     left:50%;
     top:53%;
     z-index:4;
-    width:.18rem;
+    width:.26rem;
     height:38%;
     border-radius:999px;
     background:linear-gradient(
         to bottom,
         rgba(255,236,190,0),
-        rgba(255,236,190,.42) 16%,
-        rgba(255,80,176,.24) 68%,
+        rgba(255,236,190,.72) 16%,
+        rgba(255,80,176,.42) 68%,
         rgba(255,73,173,0)
     );
     box-shadow:
-        0 0 .45rem rgba(255,230,181,.4),
-        0 0 1.2rem rgba(255,78,175,.2);
+        0 0 .72rem rgba(255,230,181,.62),
+        0 0 1.8rem rgba(255,78,175,.36);
     filter:blur(.04rem);
     mix-blend-mode:screen;
     opacity:0;
     pointer-events:none;
     transform:translateX(-50%) scaleY(.18);
     transform-origin:top center;
-    animation:slay-energy-descent 18s ease-in-out infinite;
+    animation:slay-energy-descent 10.5s ease-in-out infinite;
 }
 
 .slay-horizon-whisper{
@@ -1499,15 +1499,15 @@ footer a{
     width:50%;
     height:.52rem;
     border-radius:999px;
-    background:rgba(255,73,173,.18);
+    background:rgba(255,73,173,.25);
     box-shadow:
-        0 0 .28rem rgba(255,73,173,.62),
-        0 0 .9rem rgba(255,73,173,.36),
-        0 0 1.65rem rgba(255,73,173,.18);
+        0 0 .38rem rgba(255,73,173,.76),
+        0 0 1.15rem rgba(255,73,173,.48),
+        0 0 2.15rem rgba(255,73,173,.26);
     mix-blend-mode:screen;
-    opacity:.58;
+    opacity:.68;
     transform:translate(-50%,-50%);
-    animation:slay-neon-breath 18s steps(1,end) infinite;
+    animation:slay-neon-breath 10.5s steps(1,end) infinite;
 }
 
 .slay-star-pulse{
@@ -1653,11 +1653,11 @@ footer a{
 @keyframes slay-neon-breath{
     0%,
     100%{
-        opacity:.38;
+        opacity:.48;
         box-shadow:
-            0 0 .25rem rgba(255,73,173,.56),
-            0 0 .85rem rgba(255,73,173,.3),
-            0 0 1.5rem rgba(255,73,173,.14);
+            0 0 .32rem rgba(255,73,173,.68),
+            0 0 1rem rgba(255,73,173,.38),
+            0 0 1.9rem rgba(255,73,173,.2);
     }
 
     18%{
@@ -1669,11 +1669,11 @@ footer a{
     }
 
     52%{
-        opacity:.95;
+        opacity:1;
         box-shadow:
-            0 0 .42rem rgba(255,73,173,.9),
-            0 0 1.25rem rgba(255,73,173,.62),
-            0 0 2.6rem rgba(255,73,173,.34);
+            0 0 .58rem rgba(255,73,173,1),
+            0 0 1.75rem rgba(255,73,173,.78),
+            0 0 3.4rem rgba(255,73,173,.46);
     }
 
     54%{
@@ -1685,11 +1685,11 @@ footer a{
     }
 
     55%{
-        opacity:.82;
+        opacity:.96;
         box-shadow:
-            0 0 .36rem rgba(255,73,173,.78),
-            0 0 1.1rem rgba(255,73,173,.48),
-            0 0 2.1rem rgba(255,73,173,.24);
+            0 0 .5rem rgba(255,73,173,.94),
+            0 0 1.45rem rgba(255,73,173,.66),
+            0 0 2.8rem rgba(255,73,173,.36);
     }
 
     57%{
@@ -1758,23 +1758,23 @@ footer a{
 @keyframes slay-nebula-current{
     0%,
     100%{
-        opacity:.07;
+        opacity:.1;
         transform:translate3d(0,0,0) scale(1);
         filter:blur(1.25rem);
     }
 
     35%{
-        opacity:.18;
-        transform:translate3d(.4rem,-.28rem,0) scale(1.012);
-        filter:blur(1.05rem);
+        opacity:.24;
+        transform:translate3d(.55rem,-.38rem,0) scale(1.018);
+        filter:blur(.82rem);
     }
 
     48%{
-        opacity:.14;
+        opacity:.2;
     }
 
     64%{
-        opacity:.08;
+        opacity:.12;
         transform:translate3d(-.32rem,.22rem,0) scale(1.006);
         filter:blur(1.35rem);
     }
@@ -1784,22 +1784,22 @@ footer a{
     0%,
     100%{
         stroke-dashoffset:34;
-        opacity:.16;
+        opacity:.2;
     }
 
     28%{
         stroke-dashoffset:15;
-        opacity:.54;
+        opacity:.78;
     }
 
     42%{
         stroke-dashoffset:-4;
-        opacity:.82;
+        opacity:1;
     }
 
     68%{
         stroke-dashoffset:-22;
-        opacity:.24;
+        opacity:.34;
     }
 }
 
@@ -1807,51 +1807,51 @@ footer a{
     0%,
     100%{
         stroke-dashoffset:42;
-        opacity:.08;
+        opacity:.12;
     }
 
     18%{
-        opacity:.24;
+        opacity:.42;
     }
 
     35%{
         stroke-dashoffset:8;
-        opacity:.74;
+        opacity:.95;
     }
 
     45%{
         stroke-dashoffset:-12;
-        opacity:.9;
+        opacity:1;
     }
 
     58%{
         stroke-dashoffset:-32;
-        opacity:.16;
+        opacity:.28;
     }
 }
 
 @keyframes slay-title-anoint{
     0%,
     100%{
-        opacity:.04;
+        opacity:.08;
         transform:translate(-50%,-50%) scale(.96);
     }
 
     30%{
-        opacity:.12;
+        opacity:.24;
     }
 
     43%{
-        opacity:.42;
-        transform:translate(-50%,-50%) scale(1.04);
+        opacity:.72;
+        transform:translate(-50%,-50%) scale(1.08);
     }
 
     51%{
-        opacity:.28;
+        opacity:.5;
     }
 
     62%{
-        opacity:.08;
+        opacity:.14;
         transform:translate(-50%,-50%) scale(1);
     }
 }
@@ -1869,17 +1869,17 @@ footer a{
     }
 
     48%{
-        opacity:.42;
-        transform:translateX(-50%) scaleY(.55);
+        opacity:.64;
+        transform:translateX(-50%) scaleY(.62);
     }
 
     53%{
-        opacity:.86;
+        opacity:1;
         transform:translateX(-50%) scaleY(1);
     }
 
     60%{
-        opacity:.16;
+        opacity:.28;
         transform:translateX(-50%) scaleY(.86);
     }
 
