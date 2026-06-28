@@ -1330,272 +1330,33 @@ footer a{
     }
 }
 
-/* Slay of the Dead - cosmos direction */
+/* Slay of the Dead - finished artwork presentation */
 
 .slay-page{
-    background:#03050c;
-    color:#fff7ed;
+    background:#02030a;
 }
 
 .slay-page::before{
-    background-image:
-        url("assets/slay-webb-cosmic-cliffs.jpg"),
-        url("https://upload.wikimedia.org/wikipedia/commons/4/44/NASA%E2%80%99s_Webb_Reveals_Cosmic_Cliffs%2C_Glittering_Landscape_of_Star_Birth.jpg");
-    background-position:center 42%;
-    background-size:cover;
+    background-image:url("assets/slay-hero-reference.png");
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-size:contain;
     opacity:1;
 }
 
 .slay-page::after{
-    background:linear-gradient(180deg,rgba(0,0,0,.1),rgba(0,0,0,.18) 42%,rgba(0,0,0,.72) 100%);
-    opacity:1;
+    display:none;
 }
 
 .slay-canvas{
     height:100svh;
     padding:clamp(1.35rem,4vw,3.8rem);
-    background:linear-gradient(180deg,transparent 0 62%,rgba(4,2,9,.28) 82%,rgba(1,1,4,.86) 100%);
-}
-
-.slay-header{
-    position:absolute;
-    left:50%;
-    top:43%;
-    z-index:6;
-    width:min(68vw,36rem);
-    text-align:center;
-    transform:translate(-50%,-50%);
-    mix-blend-mode:normal;
-}
-
-.slay-header h1{
-    font-family:var(--condensed);
-    font-size:clamp(3.6rem,7.4vw,7rem);
-    font-weight:700;
-    letter-spacing:.14em;
-    line-height:.82;
-    color:#f5efe4;
-    opacity:.9;
-    text-shadow:
-        0 .08rem .04rem rgba(0,0,0,.72),
-        0 0 2.6rem rgba(255,245,230,.18);
-}
-
-.slay-header h1 span{
-    display:block;
-    margin:.05em 0 .03em;
-    color:#f5efe4;
-    font-size:.32em;
-    letter-spacing:.3em;
-    line-height:.82;
-}
-
-.slay-header h1 em{
-    display:block;
-    margin-top:.18em;
-    color:#ff5da5;
-    font-family:var(--sans);
-    font-size:.17em;
-    font-style:normal;
-    font-weight:900;
-    letter-spacing:.24em;
-    line-height:1;
-}
-
-.pink-pony-club{
-    position:absolute;
-    left:50%;
-    bottom:clamp(1.2rem,4.4vh,3rem);
-    z-index:5;
-    width:clamp(5.1rem,8vw,7.4rem);
-    height:clamp(2.3rem,4vw,3.35rem);
-    transform:translateX(-50%);
-    opacity:.74;
-}
-
-.pink-pony-club::before{
-    content:"";
-    position:absolute;
-    left:50%;
-    bottom:0;
-    width:100%;
-    height:54%;
-    background:linear-gradient(180deg,rgba(8,5,10,.9),rgba(0,0,0,.98));
-    clip-path:polygon(8% 32%,50% 0,92% 32%,100% 100%,0 100%);
-    transform:translateX(-50%);
-    box-shadow:0 0 1rem rgba(0,0,0,.9);
-}
-
-.zombie-field{
-    position:absolute;
-    left:50%;
-    bottom:-.18rem;
-    z-index:0;
-    width:188%;
-    height:100%;
-    transform:translateX(-50%);
-    pointer-events:none;
-}
-
-.zombie{
-    --zx:50%;
-    --zy:60%;
-    --zs:1;
-    --zr:0deg;
-    position:absolute;
-    left:var(--zx);
-    top:var(--zy);
-    width:.54rem;
-    height:1.18rem;
-    border-radius:45% 45% 18% 18%;
-    background:linear-gradient(180deg,rgba(24,27,22,.82),rgba(3,3,4,.96));
-    box-shadow:0 0 .35rem rgba(255,56,148,.06);
-    opacity:.22;
-    transform:translate(-50%,-50%) rotate(var(--zr)) scale(var(--zs));
-}
-
-.zombie::before{
-    content:"";
-    position:absolute;
-    left:50%;
-    top:-.28rem;
-    width:.42rem;
-    height:.42rem;
-    border-radius:50%;
-    background:rgba(25,31,22,.88);
-    box-shadow:inset .12rem -.05rem 0 rgba(96,121,81,.3);
-    transform:translateX(-50%);
-}
-
-.zombie::after{
-    content:"";
-    position:absolute;
-    left:-.48rem;
-    top:.22rem;
-    width:1.55rem;
-    height:.1rem;
-    background:linear-gradient(90deg,rgba(103,124,91,.36),rgba(16,18,15,.74));
-    border-radius:999px;
-    transform:rotate(var(--arm,.14turn));
-    transform-origin:78% center;
-}
-
-.zombie-one{
-    --zx:9%;
-    --zy:70%;
-    --zs:.84;
-    --zr:-9deg;
-    --arm:.06turn;
-}
-
-.zombie-two{
-    --zx:28%;
-    --zy:80%;
-    --zs:.7;
-    --zr:7deg;
-    --arm:-.08turn;
-    opacity:.5;
-}
-
-.zombie-three{
-    --zx:72%;
-    --zy:80%;
-    --zs:.78;
-    --zr:8deg;
-    --arm:.44turn;
-}
-
-.zombie-four{
-    --zx:92%;
-    --zy:68%;
-    --zs:.92;
-    --zr:11deg;
-    --arm:.53turn;
-}
-
-.pony-roof{
-    position:absolute;
-    left:50%;
-    bottom:31%;
-    width:86%;
-    height:.45rem;
-    background:rgba(0,0,0,.92);
-    transform:translateX(-50%);
-}
-
-.pony-neon{
-    position:absolute;
-    left:50%;
-    bottom:17%;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    color:#ff5aa8;
-    font-family:var(--sans);
-    font-size:clamp(.46rem,.82vw,.66rem);
-    font-weight:800;
-    letter-spacing:.08em;
-    line-height:.9;
-    text-align:center;
-    text-transform:uppercase;
-    transform:translateX(-50%);
-    text-shadow:
-        0 0 .25rem rgba(255,95,174,.95),
-        0 0 .55rem rgba(255,38,145,.5),
-        0 0 1rem rgba(255,38,145,.24);
-    animation:pony-neon-flicker 6.8s infinite;
-}
-
-.pony-neon span:first-child{
-    font-size:.82em;
-}
-
-.pony-neon span:last-child{
-    margin-top:.16rem;
-}
-
-@keyframes pony-neon-flicker{
-    0%,
-    8%,
-    12%,
-    34%,
-    38%,
-    100%{
-        opacity:1;
-    }
-
-    9%,
-    35%{
-        opacity:.38;
-    }
-
-    10%,
-    36%{
-        opacity:.8;
-    }
+    background:none;
 }
 
 @media (max-width:760px){
-    .slay-page::before{
-        background-position:center center;
-    }
-
     .slay-canvas{
         padding:1.35rem;
-    }
-
-    .slay-header{
-        top:42%;
-        width:min(82vw,23rem);
-    }
-
-    .slay-header h1{
-        font-size:clamp(2.85rem,13vw,4.7rem);
-    }
-
-    .pink-pony-club{
-        bottom:clamp(2.1rem,7vh,4rem);
-        width:clamp(5.6rem,25vw,7.6rem);
     }
 }
 
