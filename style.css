@@ -46,6 +46,21 @@ body{
     -webkit-font-smoothing:antialiased;
 }
 
+body::after{
+    content:"";
+    position:fixed;
+    inset:0;
+    z-index:20;
+    background:#000;
+    opacity:0;
+    pointer-events:none;
+    transition:opacity .32s ease;
+}
+
+body.fade-to-black::after{
+    opacity:1;
+}
+
 .page{
     width:min(76vw,var(--column));
     margin:clamp(4.6rem,9vw,6.75rem) auto clamp(3.25rem,7vw,5rem);
@@ -299,6 +314,10 @@ footer a{
     transition:none;
 }
 
+.home-page .mouth-wide-hush-link{
+    cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='24' viewBox='0 0 32 24'%3E%3Cpath d='M3 8 C7 3 12 5 16 8 C20 5 25 3 29 8 C27 15 22 19 16 17 C10 19 5 15 3 8 Z' fill='%23050505'/%3E%3Cellipse cx='11' cy='10' rx='3.2' ry='2.1' fill='%23fbfaf7'/%3E%3Cellipse cx='21' cy='10' rx='3.2' ry='2.1' fill='%23fbfaf7'/%3E%3Cpath d='M14 15 C15 16 17 16 18 15' stroke='%23b08a55' stroke-width='1' fill='none'/%3E%3C/svg%3E") 16 12,pointer;
+}
+
 .home-page .projects ul{
     max-width:39rem;
 }
@@ -526,6 +545,201 @@ footer a{
 
     .medium{
         margin-top:.2rem;
+    }
+}
+
+/* Mouth Wide Hush */
+
+.mouth-page{
+    min-height:100svh;
+    overflow:hidden;
+    background:
+        radial-gradient(circle at 72% 28%,rgba(176,138,85,.18),transparent 14rem),
+        radial-gradient(circle at 18% 88%,rgba(255,244,221,.07),transparent 20rem),
+        linear-gradient(135deg,#080605 0%,#17100d 44%,#030303 100%);
+    color:#efe4cf;
+    font-family:var(--serif);
+}
+
+.mouth-page::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:linear-gradient(90deg,rgba(0,0,0,.3),transparent 28%,rgba(0,0,0,.38));
+    pointer-events:none;
+}
+
+.mouth-canvas{
+    position:relative;
+    z-index:1;
+    height:100svh;
+    padding:clamp(1.4rem,4vw,3.5rem);
+    display:grid;
+    grid-template-columns:repeat(12,minmax(0,1fr));
+    grid-template-rows:repeat(12,minmax(0,1fr));
+    gap:clamp(1rem,2vw,2rem);
+}
+
+.mouth-image{
+    position:relative;
+    grid-column:4 / 13;
+    grid-row:2 / 12;
+    align-self:center;
+    justify-self:end;
+    width:min(74vw,980px);
+    height:min(70svh,620px);
+    margin:0;
+    opacity:.66;
+    overflow:hidden;
+    filter:saturate(.82) contrast(1.05) brightness(.62);
+}
+
+.mouth-image::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+        linear-gradient(90deg,rgba(5,3,2,.9),rgba(5,3,2,.22) 38%,rgba(5,3,2,.42)),
+        linear-gradient(0deg,rgba(5,3,2,.82),transparent 34%,rgba(5,3,2,.38));
+}
+
+.mouth-image img{
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit:cover;
+    object-position:center center;
+}
+
+.mouth-nav{
+    grid-column:1 / 13;
+    grid-row:1;
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:1rem;
+    font-family:var(--sans);
+    font-size:.64rem;
+    font-weight:700;
+    letter-spacing:.14em;
+    line-height:1;
+    text-transform:uppercase;
+}
+
+.mouth-nav a{
+    color:#efe4cf;
+    opacity:.72;
+    text-decoration:none;
+}
+
+.mouth-header{
+    grid-column:2 / 10;
+    grid-row:2 / 5;
+    align-self:end;
+}
+
+.mouth-header p{
+    margin-bottom:.75rem;
+    color:#b08a55;
+    font-family:var(--sans);
+    font-size:.68rem;
+    font-weight:700;
+    letter-spacing:.18em;
+    line-height:1;
+}
+
+.mouth-header h1{
+    font-size:clamp(3rem,8.4vw,7rem);
+    font-weight:600;
+    letter-spacing:-.045em;
+    line-height:.78;
+    text-transform:uppercase;
+}
+
+.mouth-quote{
+    grid-column:6 / 12;
+    grid-row:5 / 9;
+    align-self:center;
+    margin:0;
+}
+
+.mouth-quote blockquote{
+    margin:0;
+    color:#f5ead8;
+    font-size:clamp(1.35rem,2.7vw,2.45rem);
+    font-style:italic;
+    font-weight:500;
+    letter-spacing:-.025em;
+    line-height:1.02;
+}
+
+.mouth-sections{
+    grid-column:1 / 5;
+    grid-row:8 / 11;
+    align-self:end;
+    color:#9b8565;
+    font-family:var(--sans);
+    font-size:.62rem;
+    font-weight:700;
+    letter-spacing:.16em;
+    line-height:1.8;
+}
+
+.mouth-sections p{
+    margin:0;
+}
+
+@media (hover:hover){
+    .mouth-nav a:hover{
+        opacity:1;
+    }
+}
+
+@media (max-width:760px){
+    .mouth-page{
+        overflow:auto;
+    }
+
+    .mouth-canvas{
+        height:auto;
+        min-height:100svh;
+        display:block;
+        padding:1.35rem;
+    }
+
+    .mouth-image{
+        width:100%;
+        height:42svh;
+        margin:0 0 3rem;
+        opacity:.72;
+    }
+
+    .mouth-image img{
+        object-position:center center;
+    }
+
+    .mouth-nav{
+        margin-bottom:4.5rem;
+    }
+
+    .mouth-header{
+        margin-bottom:4rem;
+    }
+
+    .mouth-header h1{
+        font-size:clamp(3.45rem,16vw,6rem);
+    }
+
+    .mouth-quote{
+        margin-bottom:4.5rem;
+    }
+
+    .mouth-quote blockquote{
+        font-size:clamp(1.75rem,8vw,3.2rem);
+    }
+
+    .mouth-sections{
+        font-size:.6rem;
     }
 }
 
