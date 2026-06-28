@@ -244,8 +244,7 @@ body.fade-to-black::after{
 .phantasmagoria-vision img{
     display:block;
     width:100%;
-    aspect-ratio:3 / 2;
-    object-fit:cover;
+    height:auto;
 }
 
 .phantasmagoria-intro{
