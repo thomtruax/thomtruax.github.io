@@ -1341,6 +1341,7 @@ footer a{
     background-position:center bottom;
     background-repeat:no-repeat;
     background-size:cover;
+    filter:saturate(.96) brightness(.92);
     opacity:1;
 }
 
@@ -1371,15 +1372,125 @@ footer a{
     animation:slay-nebula-current 34s ease-in-out infinite;
 }
 
+.slay-nebula-map{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    overflow:visible;
+}
+
+.slay-current{
+    fill:none;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    stroke-width:.16;
+    stroke-dasharray:3 18;
+    stroke-dashoffset:34;
+    opacity:.42;
+    filter:blur(.09rem);
+    animation:slay-current-travel 32s ease-in-out infinite;
+}
+
+.slay-current-orange{
+    stroke:rgba(255,128,47,.78);
+}
+
+.slay-current-blue{
+    stroke:rgba(86,176,255,.72);
+}
+
+.slay-current-two{
+    animation-duration:38s;
+    animation-delay:-13s;
+    opacity:.3;
+}
+
+.slay-current-three{
+    animation-duration:36s;
+    animation-delay:-8s;
+    opacity:.34;
+}
+
+.slay-current-four{
+    animation-duration:41s;
+    animation-delay:-19s;
+    opacity:.25;
+}
+
+.slay-live-title{
+    position:absolute;
+    left:50%;
+    top:45.2%;
+    z-index:4;
+    display:flex;
+    width:min(34rem,42vw);
+    pointer-events:none;
+    transform:translate(-50%,-50%);
+    flex-direction:column;
+    align-items:center;
+    color:#f5f0e6;
+    font-family:var(--sans);
+    text-align:center;
+    text-transform:uppercase;
+    opacity:.86;
+    text-shadow:0 0 1.1rem rgba(0,0,0,.26);
+}
+
+.slay-title-main{
+    font-size:clamp(4rem,7.2vw,7.8rem);
+    font-weight:300;
+    letter-spacing:.46em;
+    line-height:.82;
+    padding-left:.46em;
+}
+
+.slay-title-mid{
+    margin-top:.72rem;
+    font-size:clamp(1rem,1.7vw,1.82rem);
+    font-weight:400;
+    letter-spacing:.54em;
+    line-height:1;
+    padding-left:.54em;
+}
+
+.slay-title-vol{
+    margin-top:1rem;
+    color:#ff5fb5;
+    font-size:clamp(.72rem,1vw,1.08rem);
+    font-weight:500;
+    letter-spacing:.42em;
+    line-height:1;
+    padding-left:.42em;
+    text-shadow:
+        0 0 .4rem rgba(255,95,181,.18),
+        0 0 .85rem rgba(255,95,181,.08);
+}
+
 .slay-horizon-whisper{
     position:absolute;
     left:50%;
     bottom:clamp(1.35rem,3.4vh,2.35rem);
-    z-index:3;
+    z-index:5;
     width:clamp(6rem,8vw,7.8rem);
     height:clamp(1.85rem,2.8vw,2.9rem);
     opacity:.52;
     pointer-events:none;
+    transform:translateX(-50%);
+}
+
+.slay-club-trace{
+    position:absolute;
+    left:50%;
+    bottom:7%;
+    width:96%;
+    height:38%;
+    border-bottom:.08rem solid rgba(255,66,160,.11);
+    background:
+        linear-gradient(to right,transparent 0 6%,rgba(0,0,0,.34) 6% 94%,transparent 94%),
+        radial-gradient(ellipse at 50% 76%,rgba(255,47,155,.16),transparent 58%);
+    filter:blur(.01rem);
+    opacity:.55;
     transform:translateX(-50%);
 }
 
@@ -1408,7 +1519,7 @@ footer a{
 .slay-star-pulse{
     position:absolute;
     inset:0;
-    z-index:3;
+    z-index:5;
     pointer-events:none;
 }
 
@@ -1661,6 +1772,24 @@ footer a{
     }
 }
 
+@keyframes slay-current-travel{
+    0%,
+    100%{
+        stroke-dashoffset:34;
+        opacity:.18;
+    }
+
+    42%{
+        stroke-dashoffset:10;
+        opacity:.5;
+    }
+
+    68%{
+        stroke-dashoffset:-8;
+        opacity:.26;
+    }
+}
+
 @keyframes slay-cosmic-breath{
     0%,
     100%{
@@ -1681,6 +1810,23 @@ footer a{
 @media (max-width:760px){
     .slay-canvas{
         padding:1.35rem;
+    }
+
+    .slay-live-title{
+        top:43.5%;
+        width:min(22rem,72vw);
+    }
+
+    .slay-title-main{
+        font-size:clamp(3rem,14vw,5.4rem);
+        letter-spacing:.34em;
+        padding-left:.34em;
+    }
+
+    .slay-title-mid{
+        font-size:clamp(.78rem,4vw,1.1rem);
+        letter-spacing:.32em;
+        padding-left:.32em;
     }
 
     .slay-horizon-whisper{
