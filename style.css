@@ -1365,9 +1365,9 @@ footer a{
     left:50%;
     bottom:clamp(1.45rem,3.7vh,2.6rem);
     z-index:3;
-    width:clamp(7.5rem,10.5vw,10rem);
-    height:clamp(2.25rem,3.7vw,3.75rem);
-    opacity:.58;
+    width:clamp(6.25rem,8.6vw,8.25rem);
+    height:clamp(1.9rem,3vw,3.1rem);
+    opacity:.44;
     pointer-events:none;
     transform:translateX(-50%);
 }
@@ -1376,16 +1376,89 @@ footer a{
     position:absolute;
     left:50%;
     bottom:36%;
-    width:38%;
-    height:.48rem;
+    width:32%;
+    height:.36rem;
     border-radius:999px;
-    background:rgba(255,56,161,.12);
+    background:rgba(255,56,161,.09);
     box-shadow:
-        0 0 .22rem rgba(255,56,161,.18),
-        0 0 .72rem rgba(255,56,161,.13),
-        0 0 1.2rem rgba(255,56,161,.08);
+        0 0 .18rem rgba(255,56,161,.15),
+        0 0 .58rem rgba(255,56,161,.1),
+        0 0 .95rem rgba(255,56,161,.06);
     transform:translateX(-50%);
-    animation:slay-neon-breath 8.5s ease-in-out infinite;
+    animation:slay-neon-breath 9.5s ease-in-out infinite;
+}
+
+.slay-star-pulse{
+    position:absolute;
+    inset:0;
+    z-index:3;
+    pointer-events:none;
+}
+
+.slay-star{
+    --x:50%;
+    --y:30%;
+    --s:1;
+    --delay:0s;
+    position:absolute;
+    left:var(--x);
+    top:var(--y);
+    width:.34rem;
+    height:.34rem;
+    border-radius:50%;
+    background:rgba(255,246,221,.68);
+    box-shadow:
+        0 0 .35rem rgba(255,246,221,.18),
+        0 0 .75rem rgba(255,166,87,.08);
+    opacity:.18;
+    transform:translate(-50%,-50%) scale(var(--s));
+    animation:slay-star-faint 18s ease-in-out var(--delay) infinite;
+}
+
+.slay-star::before,
+.slay-star::after{
+    content:"";
+    position:absolute;
+    left:50%;
+    top:50%;
+    width:220%;
+    height:.035rem;
+    border-radius:999px;
+    background:rgba(255,246,221,.18);
+    transform:translate(-50%,-50%);
+}
+
+.slay-star::after{
+    width:.035rem;
+    height:220%;
+}
+
+.slay-star-one{
+    --x:24%;
+    --y:53%;
+    --s:.72;
+    --delay:-4s;
+}
+
+.slay-star-two{
+    --x:31%;
+    --y:43%;
+    --s:.5;
+    --delay:-11s;
+}
+
+.slay-star-three{
+    --x:67%;
+    --y:21%;
+    --s:.48;
+    --delay:-7s;
+}
+
+.slay-star-four{
+    --x:78%;
+    --y:35%;
+    --s:.42;
+    --delay:-15s;
 }
 
 .slay-zombie{
@@ -1462,28 +1535,53 @@ footer a{
 @keyframes slay-neon-breath{
     0%,
     100%{
-        opacity:.24;
+        opacity:.16;
     }
 
     17%{
-        opacity:.42;
+        opacity:.34;
     }
 
     22%{
-        opacity:.2;
+        opacity:.13;
     }
 
     48%{
-        opacity:.36;
+        opacity:.27;
     }
 
     53%{
-        opacity:.16;
+        opacity:.08;
     }
 
     57%,
     76%{
-        opacity:.31;
+        opacity:.22;
+    }
+}
+
+@keyframes slay-star-faint{
+    0%,
+    100%{
+        opacity:.1;
+        transform:translate(-50%,-50%) scale(calc(var(--s) * .88));
+    }
+
+    29%{
+        opacity:.16;
+    }
+
+    36%{
+        opacity:.34;
+        transform:translate(-50%,-50%) scale(calc(var(--s) * 1.08));
+    }
+
+    42%{
+        opacity:.13;
+    }
+
+    73%{
+        opacity:.24;
     }
 }
 
@@ -1511,7 +1609,7 @@ footer a{
 
     .slay-horizon-whisper{
         bottom:clamp(1.9rem,5.5vh,3.1rem);
-        width:clamp(5.8rem,25vw,7.8rem);
+        width:clamp(5rem,20vw,6.75rem);
     }
 }
 
