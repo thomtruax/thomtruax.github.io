@@ -1356,7 +1356,7 @@ footer a{
 
 .slay-nebula-energy{
     position:absolute;
-    inset:-8%;
+    inset:0;
     z-index:2;
     pointer-events:none;
     background:
@@ -1364,11 +1364,11 @@ footer a{
         radial-gradient(ellipse at 24% 62%,rgba(255,139,45,.075),rgba(255,139,45,.035) 14%,transparent 31%),
         radial-gradient(ellipse at 75% 27%,rgba(74,166,255,.07),rgba(74,166,255,.035) 17%,transparent 36%),
         radial-gradient(ellipse at 66% 44%,rgba(96,182,255,.052),rgba(96,182,255,.026) 12%,transparent 28%);
-    filter:blur(1.15rem);
+    filter:blur(1rem);
     mix-blend-mode:screen;
-    opacity:.055;
+    opacity:.12;
     transform:translate3d(0,0,0) scale(1);
-    animation:slay-nebula-current 34s ease-in-out infinite;
+    animation:slay-nebula-current 28s ease-in-out infinite;
 }
 
 .slay-nebula-map{
@@ -1383,12 +1383,12 @@ footer a{
     fill:none;
     stroke-linecap:round;
     stroke-linejoin:round;
-    stroke-width:.16;
-    stroke-dasharray:3 18;
+    stroke-width:.24;
+    stroke-dasharray:4 15;
     stroke-dashoffset:34;
-    opacity:.42;
-    filter:blur(.09rem);
-    animation:slay-current-travel 32s ease-in-out infinite;
+    opacity:.52;
+    filter:blur(.07rem);
+    animation:slay-current-travel 26s ease-in-out infinite;
 }
 
 .slay-current-orange{
@@ -1420,30 +1420,31 @@ footer a{
 .slay-horizon-whisper{
     position:absolute;
     left:50%;
-    bottom:clamp(1.35rem,3.4vh,2.35rem);
+    top:92.4%;
     z-index:5;
-    width:clamp(6rem,8vw,7.8rem);
-    height:clamp(1.85rem,2.8vw,2.9rem);
-    opacity:.52;
+    width:clamp(8rem,11vw,11.25rem);
+    height:clamp(2.1rem,3.2vw,3.3rem);
+    opacity:.74;
     pointer-events:none;
-    transform:translateX(-50%);
+    transform:translate(-50%,-50%);
 }
 
 .slay-neon-breath{
     position:absolute;
     left:50%;
-    bottom:34%;
-    width:36%;
-    height:.38rem;
+    top:34%;
+    width:50%;
+    height:.52rem;
     border-radius:999px;
-    background:rgba(255,73,173,.12);
+    background:rgba(255,73,173,.18);
     box-shadow:
-        0 0 .18rem rgba(255,73,173,.42),
-        0 0 .58rem rgba(255,73,173,.22),
-        0 0 1rem rgba(255,73,173,.1);
-    opacity:.34;
-    transform:translateX(-50%);
-    animation:slay-neon-breath 13.5s steps(1,end) infinite;
+        0 0 .28rem rgba(255,73,173,.62),
+        0 0 .9rem rgba(255,73,173,.36),
+        0 0 1.65rem rgba(255,73,173,.18);
+    mix-blend-mode:screen;
+    opacity:.58;
+    transform:translate(-50%,-50%);
+    animation:slay-neon-breath 8.5s steps(1,end) infinite;
 }
 
 .slay-star-pulse{
@@ -1463,16 +1464,18 @@ footer a{
     position:absolute;
     left:var(--x);
     top:var(--y);
-    width:.32rem;
-    height:.32rem;
+    width:.62rem;
+    height:.62rem;
     border-radius:50%;
-    background:rgba(var(--star-color),.62);
+    background:rgba(var(--star-color),.82);
     box-shadow:
-        0 0 .32rem rgba(var(--star-color),.24),
-        0 0 .82rem rgba(var(--star-glow),.1);
-    opacity:.24;
+        0 0 .5rem rgba(var(--star-color),.52),
+        0 0 1.4rem rgba(var(--star-glow),.26),
+        0 0 2.4rem rgba(var(--star-glow),.12);
+    mix-blend-mode:screen;
+    opacity:.54;
     transform:translate(-50%,-50%) scale(var(--s));
-    animation:slay-star-faint var(--cycle,24s) ease-in-out var(--delay) infinite;
+    animation:slay-star-faint var(--cycle,16s) ease-in-out var(--delay) infinite;
 }
 
 .slay-star::before,
@@ -1481,24 +1484,24 @@ footer a{
     position:absolute;
     left:50%;
     top:50%;
-    width:220%;
-    height:.035rem;
+    width:360%;
+    height:.045rem;
     border-radius:999px;
-    background:rgba(var(--star-color),.16);
+    background:rgba(var(--star-color),.32);
     transform:translate(-50%,-50%);
 }
 
 .slay-star::after{
-    width:.035rem;
-    height:220%;
+    width:.045rem;
+    height:360%;
 }
 
 .slay-star-one{
     --x:22.4%;
     --y:66.8%;
-    --s:.78;
+    --s:1.05;
     --delay:-4s;
-    --cycle:25s;
+    --cycle:15s;
     --star-color:255,246,221;
     --star-glow:255,146,55;
 }
@@ -1506,9 +1509,9 @@ footer a{
 .slay-star-two{
     --x:75.1%;
     --y:6.7%;
-    --s:.42;
-    --delay:-15s;
-    --cycle:31s;
+    --s:.72;
+    --delay:-9s;
+    --cycle:19s;
     --star-color:166,215,255;
     --star-glow:45,136,255;
 }
@@ -1587,116 +1590,120 @@ footer a{
 @keyframes slay-neon-breath{
     0%,
     100%{
-        opacity:.34;
+        opacity:.5;
         box-shadow:
-            0 0 .18rem rgba(255,73,173,.42),
-            0 0 .58rem rgba(255,73,173,.22),
-            0 0 1rem rgba(255,73,173,.1);
+            0 0 .25rem rgba(255,73,173,.56),
+            0 0 .85rem rgba(255,73,173,.3),
+            0 0 1.5rem rgba(255,73,173,.14);
     }
 
     28%{
-        opacity:.39;
+        opacity:.7;
         box-shadow:
-            0 0 .2rem rgba(255,73,173,.48),
-            0 0 .68rem rgba(255,73,173,.26),
-            0 0 1.12rem rgba(255,73,173,.12);
+            0 0 .32rem rgba(255,73,173,.72),
+            0 0 1rem rgba(255,73,173,.42),
+            0 0 1.8rem rgba(255,73,173,.22);
     }
 
     30%{
-        opacity:.18;
+        opacity:.2;
         box-shadow:
-            0 0 .1rem rgba(255,73,173,.25),
-            0 0 .3rem rgba(255,73,173,.13),
-            0 0 .58rem rgba(255,73,173,.06);
+            0 0 .12rem rgba(255,73,173,.28),
+            0 0 .35rem rgba(255,73,173,.14),
+            0 0 .72rem rgba(255,73,173,.07);
     }
 
     31%{
-        opacity:.33;
+        opacity:.58;
         box-shadow:
-            0 0 .17rem rgba(255,73,173,.4),
-            0 0 .54rem rgba(255,73,173,.2),
-            0 0 .9rem rgba(255,73,173,.1);
+            0 0 .25rem rgba(255,73,173,.6),
+            0 0 .82rem rgba(255,73,173,.34),
+            0 0 1.45rem rgba(255,73,173,.16);
     }
 
     67%{
-        opacity:.36;
+        opacity:.54;
     }
 
     68%{
-        opacity:.14;
+        opacity:.18;
         box-shadow:
-            0 0 .08rem rgba(255,73,173,.2),
-            0 0 .24rem rgba(255,73,173,.1),
-            0 0 .44rem rgba(255,73,173,.05);
+            0 0 .08rem rgba(255,73,173,.22),
+            0 0 .24rem rgba(255,73,173,.12),
+            0 0 .44rem rgba(255,73,173,.06);
     }
 
     69%{
-        opacity:.34;
+        opacity:.56;
     }
 
     72%{
-        opacity:.25;
+        opacity:.34;
     }
 
     74%{
-        opacity:.35;
+        opacity:.58;
     }
 }
 
 @keyframes slay-star-faint{
     0%,
     100%{
-        opacity:.2;
+        opacity:.42;
         box-shadow:
-            0 0 .32rem rgba(var(--star-color),.2),
-            0 0 .8rem rgba(var(--star-glow),.09);
+            0 0 .42rem rgba(var(--star-color),.42),
+            0 0 1.2rem rgba(var(--star-glow),.22),
+            0 0 2.2rem rgba(var(--star-glow),.1);
         transform:translate(-50%,-50%) scale(var(--s));
     }
 
     38%{
-        opacity:.28;
+        opacity:.58;
         box-shadow:
-            0 0 .42rem rgba(var(--star-color),.28),
-            0 0 1.05rem rgba(var(--star-glow),.13);
+            0 0 .62rem rgba(var(--star-color),.56),
+            0 0 1.55rem rgba(var(--star-glow),.3),
+            0 0 2.8rem rgba(var(--star-glow),.14);
     }
 
     49%{
-        opacity:.36;
+        opacity:.78;
         box-shadow:
-            0 0 .55rem rgba(var(--star-color),.34),
-            0 0 1.35rem rgba(var(--star-glow),.18);
-        transform:translate(-50%,-50%) scale(calc(var(--s) * 1.08));
+            0 0 .8rem rgba(var(--star-color),.7),
+            0 0 2rem rgba(var(--star-glow),.4),
+            0 0 3.4rem rgba(var(--star-glow),.22);
+        transform:translate(-50%,-50%) scale(calc(var(--s) * 1.18));
     }
 
     61%{
-        opacity:.25;
+        opacity:.5;
         box-shadow:
-            0 0 .38rem rgba(var(--star-color),.23),
-            0 0 .95rem rgba(var(--star-glow),.11);
-        transform:translate(-50%,-50%) scale(calc(var(--s) * 1.02));
+            0 0 .54rem rgba(var(--star-color),.48),
+            0 0 1.35rem rgba(var(--star-glow),.24),
+            0 0 2.5rem rgba(var(--star-glow),.12);
+        transform:translate(-50%,-50%) scale(calc(var(--s) * 1.05));
     }
 
     82%{
-        opacity:.21;
+        opacity:.44;
     }
 }
 
 @keyframes slay-nebula-current{
     0%,
     100%{
-        opacity:.04;
+        opacity:.07;
         transform:translate3d(0,0,0) scale(1);
         filter:blur(1.25rem);
     }
 
     35%{
-        opacity:.075;
+        opacity:.13;
         transform:translate3d(.4rem,-.28rem,0) scale(1.012);
         filter:blur(1.05rem);
     }
 
     64%{
-        opacity:.055;
+        opacity:.09;
         transform:translate3d(-.32rem,.22rem,0) scale(1.006);
         filter:blur(1.35rem);
     }
@@ -1743,8 +1750,8 @@ footer a{
     }
 
     .slay-horizon-whisper{
-        bottom:clamp(1.9rem,5.5vh,3.1rem);
-        width:clamp(5rem,19vw,6.5rem);
+        top:92.4%;
+        width:clamp(5.75rem,22vw,7.25rem);
     }
 }
 
@@ -1754,5 +1761,28 @@ footer a{
     *::after{
         transition:none !important;
         animation:none !important;
+    }
+
+    .slay-nebula-energy,
+    .slay-current,
+    .slay-neon-breath,
+    .slay-star{
+        transition:none !important;
+    }
+
+    .slay-nebula-energy{
+        animation:slay-nebula-current 28s ease-in-out infinite !important;
+    }
+
+    .slay-current{
+        animation:slay-current-travel 26s ease-in-out infinite !important;
+    }
+
+    .slay-neon-breath{
+        animation:slay-neon-breath 8.5s steps(1,end) infinite !important;
+    }
+
+    .slay-star{
+        animation:slay-star-faint var(--cycle,16s) ease-in-out var(--delay) infinite !important;
     }
 }
