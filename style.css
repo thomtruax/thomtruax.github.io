@@ -317,11 +317,13 @@ body.fade-to-black::after{
 .project-phantasmagoria{
     min-height:100svh;
     background:
-        linear-gradient(90deg,rgba(21,10,18,.76),rgba(21,10,18,.2) 38%,rgba(8,6,10,.48)),
-        linear-gradient(0deg,rgba(6,4,7,.82),rgba(6,4,7,.12) 44%,rgba(255,226,236,.1)),
+        radial-gradient(circle at 44% 39%,rgba(255,226,205,.16),transparent 18rem),
+        linear-gradient(90deg,rgba(29,13,21,.82),rgba(29,13,21,.34) 38%,rgba(8,6,10,.58)),
+        linear-gradient(0deg,rgba(6,4,7,.88),rgba(6,4,7,.22) 44%,rgba(255,226,236,.16)),
         url("assets/P1.jpg") center center / cover no-repeat fixed,
         #120b10;
     color:#fff0e4;
+    background-blend-mode:soft-light,multiply,normal,normal;
 }
 
 .project-phantasmagoria::before{
@@ -330,9 +332,25 @@ body.fade-to-black::after{
     inset:0;
     z-index:-1;
     background:
-        repeating-linear-gradient(90deg,rgba(255,255,255,.032) 0 1px,transparent 1px 8px),
-        radial-gradient(circle at 14% 82%,rgba(214,67,90,.18),transparent 18rem);
-    opacity:.38;
+        linear-gradient(180deg,rgba(255,244,224,.1),transparent 22%,rgba(28,9,16,.32)),
+        repeating-linear-gradient(90deg,rgba(255,255,255,.035) 0 1px,transparent 1px 8px),
+        repeating-linear-gradient(0deg,rgba(255,255,255,.025) 0 1px,transparent 1px 5px),
+        radial-gradient(circle at 14% 82%,rgba(214,67,90,.2),transparent 18rem);
+    opacity:.46;
+    pointer-events:none;
+}
+
+.project-phantasmagoria::after{
+    content:"";
+    position:fixed;
+    inset:0;
+    z-index:-1;
+    background:
+        radial-gradient(circle at 50% 50%,transparent 0 28%,rgba(8,4,7,.18) 56%,rgba(8,4,7,.58) 100%),
+        linear-gradient(115deg,rgba(255,228,190,.11),transparent 26%,rgba(82,32,56,.18) 70%,transparent);
+    filter:blur(10px);
+    opacity:.72;
+    transform:scale(1.035);
     pointer-events:none;
 }
 
@@ -356,8 +374,7 @@ body.fade-to-black::after{
 }
 
 .project-phantasmagoria .index-link a,
-.project-phantasmagoria footer a,
-.phantasmagoria-bible-link{
+.project-phantasmagoria footer a{
     color:#f4ead9;
     text-shadow:0 1px 16px rgba(0,0,0,.86);
 }
@@ -391,15 +408,18 @@ body.fade-to-black::after{
 
 .phantasmagoria-bible-link{
     display:inline-block;
-    margin-top:1.05rem;
+    margin-top:.8rem;
+    color:#d8c7b8;
     font-family:var(--sans);
-    font-size:.68rem;
-    font-weight:700;
-    letter-spacing:.13em;
+    font-size:.59rem;
+    font-weight:600;
+    letter-spacing:.12em;
     line-height:1.4;
+    opacity:.48;
     text-decoration:none;
+    text-shadow:0 1px 14px rgba(0,0,0,.78);
     text-transform:uppercase;
-    transition:opacity .24s ease, transform .24s ease;
+    transition:color .24s ease, opacity .24s ease;
 }
 
 .project-phantasmagoria .project-medium{
@@ -428,8 +448,8 @@ body.fade-to-black::after{
 
 @media (hover:hover){
     .phantasmagoria-bible-link:hover{
-        opacity:.78;
-        transform:translateX(.08rem);
+        color:#f4ead9;
+        opacity:.72;
     }
 }
 
