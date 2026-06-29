@@ -910,12 +910,12 @@ footer a{
     inset:0;
     z-index:1;
     background:
-        radial-gradient(circle at 6% 31%,rgba(255,219,146,.16),transparent 4.5rem),
-        radial-gradient(circle at 94% 31%,rgba(255,219,146,.13),transparent 5rem),
-        radial-gradient(circle at 52% 13%,rgba(255,230,166,.09),transparent 7rem),
-        linear-gradient(90deg,rgba(0,0,0,.32),transparent 30%,rgba(0,0,0,.36));
+        radial-gradient(circle at 6% 31%,rgba(255,219,146,.19),transparent 4.75rem),
+        radial-gradient(circle at 94% 31%,rgba(255,219,146,.16),transparent 5.25rem),
+        radial-gradient(circle at 52% 13%,rgba(255,230,166,.11),transparent 7.25rem),
+        linear-gradient(90deg,rgba(0,0,0,.3),transparent 30%,rgba(0,0,0,.34));
     mix-blend-mode:screen;
-    opacity:.58;
+    opacity:.62;
     animation:mouth-candle-breathe 8s ease-in-out infinite alternate;
     pointer-events:none;
 }
@@ -958,7 +958,7 @@ footer a{
     margin:0;
     opacity:.94;
     overflow:hidden;
-    filter:saturate(.84) contrast(1.12) brightness(.78) blur(.45px);
+    filter:saturate(.84) contrast(1.1) brightness(.82) blur(.45px);
 }
 
 .mouth-image::after{
@@ -966,10 +966,10 @@ footer a{
     position:absolute;
     inset:0;
     background:
-        radial-gradient(circle at 50% 18%,rgba(255,222,150,.1),transparent 8rem),
-        linear-gradient(90deg,rgba(5,3,2,.64),rgba(5,3,2,.1) 40%,rgba(5,3,2,.33)),
-        linear-gradient(0deg,rgba(5,3,2,.57),transparent 38%,rgba(5,3,2,.25)),
-        linear-gradient(180deg,rgba(0,0,0,.18),rgba(0,0,0,.08) 36%,rgba(0,0,0,.45));
+        radial-gradient(circle at 50% 18%,rgba(255,222,150,.12),transparent 8.5rem),
+        linear-gradient(90deg,rgba(5,3,2,.6),rgba(5,3,2,.08) 40%,rgba(5,3,2,.3)),
+        linear-gradient(0deg,rgba(5,3,2,.54),transparent 38%,rgba(5,3,2,.24)),
+        linear-gradient(180deg,rgba(0,0,0,.15),rgba(0,0,0,.06) 36%,rgba(0,0,0,.42));
 }
 
 .mouth-image img{
@@ -1078,14 +1078,14 @@ footer a{
         height:100svh;
         margin:0;
         opacity:.84;
-        filter:saturate(.82) contrast(1.1) brightness(.76) blur(.4px);
+        filter:saturate(.82) contrast(1.08) brightness(.8) blur(.4px);
     }
 
     .mouth-image::after{
         background:
-            radial-gradient(circle at 52% 22%,rgba(255,222,150,.08),transparent 8rem),
-            linear-gradient(90deg,rgba(5,3,2,.68),rgba(5,3,2,.18) 54%,rgba(5,3,2,.56)),
-            linear-gradient(0deg,rgba(5,3,2,.64),transparent 46%,rgba(5,3,2,.3));
+            radial-gradient(circle at 52% 22%,rgba(255,222,150,.1),transparent 8.25rem),
+            linear-gradient(90deg,rgba(5,3,2,.64),rgba(5,3,2,.16) 54%,rgba(5,3,2,.52)),
+            linear-gradient(0deg,rgba(5,3,2,.6),transparent 46%,rgba(5,3,2,.28));
     }
 
     .mouth-image img{
@@ -1120,11 +1120,11 @@ footer a{
 
 @keyframes mouth-candle-breathe{
     from{
-        opacity:.45;
+        opacity:.48;
     }
 
     to{
-        opacity:.66;
+        opacity:.72;
     }
 }
 
