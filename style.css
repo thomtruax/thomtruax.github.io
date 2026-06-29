@@ -908,11 +908,33 @@ footer a{
     content:"";
     position:fixed;
     inset:0;
+    z-index:1;
     background:
-        radial-gradient(circle at 12% 42%,rgba(176,138,85,.08),transparent 12rem),
-        radial-gradient(circle at 86% 36%,rgba(176,138,85,.07),transparent 10rem),
-        linear-gradient(90deg,rgba(0,0,0,.2),transparent 30%,rgba(0,0,0,.28));
-    animation:mouth-candle-breathe 9s ease-in-out infinite alternate;
+        radial-gradient(circle at 6% 31%,rgba(255,219,146,.16),transparent 4.5rem),
+        radial-gradient(circle at 94% 31%,rgba(255,219,146,.13),transparent 5rem),
+        radial-gradient(circle at 52% 13%,rgba(255,230,166,.09),transparent 7rem),
+        linear-gradient(90deg,rgba(0,0,0,.32),transparent 30%,rgba(0,0,0,.36));
+    mix-blend-mode:screen;
+    opacity:.58;
+    animation:mouth-candle-breathe 8s ease-in-out infinite alternate;
+    pointer-events:none;
+}
+
+.mouth-page::after{
+    content:"";
+    position:fixed;
+    inset:-6%;
+    z-index:3;
+    background:
+        repeating-linear-gradient(0deg,rgba(255,255,255,.055) 0 1px,transparent 1px 4px),
+        radial-gradient(circle at 18% 28%,rgba(255,255,255,.08),transparent .08rem),
+        radial-gradient(circle at 74% 42%,rgba(255,255,255,.06),transparent .07rem),
+        radial-gradient(circle at 46% 72%,rgba(255,255,255,.045),transparent .06rem),
+        linear-gradient(90deg,rgba(255,0,0,.035),transparent 9%,rgba(0,255,255,.025) 92%,transparent);
+    background-size:auto,3px 3px,4px 4px,5px 5px,100% 100%;
+    mix-blend-mode:screen;
+    opacity:.34;
+    animation:mouth-tape-drift 6.5s steps(5,end) infinite;
     pointer-events:none;
 }
 
@@ -936,7 +958,7 @@ footer a{
     margin:0;
     opacity:.94;
     overflow:hidden;
-    filter:saturate(.94) contrast(1.01) brightness(.92);
+    filter:saturate(.84) contrast(1.12) brightness(.78) blur(.45px);
 }
 
 .mouth-image::after{
@@ -944,8 +966,10 @@ footer a{
     position:absolute;
     inset:0;
     background:
-        linear-gradient(90deg,rgba(5,3,2,.55),rgba(5,3,2,.08) 40%,rgba(5,3,2,.24)),
-        linear-gradient(0deg,rgba(5,3,2,.48),transparent 38%,rgba(5,3,2,.18));
+        radial-gradient(circle at 50% 18%,rgba(255,222,150,.1),transparent 8rem),
+        linear-gradient(90deg,rgba(5,3,2,.64),rgba(5,3,2,.1) 40%,rgba(5,3,2,.33)),
+        linear-gradient(0deg,rgba(5,3,2,.57),transparent 38%,rgba(5,3,2,.25)),
+        linear-gradient(180deg,rgba(0,0,0,.18),rgba(0,0,0,.08) 36%,rgba(0,0,0,.45));
 }
 
 .mouth-image img{
@@ -957,9 +981,10 @@ footer a{
 }
 
 .mouth-nav,
-.mouth-header{
+.mouth-header,
+.mouth-timecode{
     position:relative;
-    z-index:2;
+    z-index:4;
 }
 
 .mouth-nav{
@@ -1008,6 +1033,23 @@ footer a{
     text-transform:uppercase;
 }
 
+.mouth-timecode{
+    grid-column:10 / 13;
+    grid-row:12;
+    align-self:end;
+    justify-self:end;
+    margin:0;
+    color:#efe4cf;
+    font-family:var(--sans);
+    font-size:.58rem;
+    font-weight:700;
+    letter-spacing:.16em;
+    line-height:1;
+    opacity:.42;
+    text-shadow:0 0 .4rem rgba(239,228,207,.18);
+    animation:mouth-timecode-waver 5s steps(1,end) infinite;
+}
+
 @media (hover:hover){
     .mouth-nav a:hover{
         opacity:1;
@@ -1036,13 +1078,14 @@ footer a{
         height:100svh;
         margin:0;
         opacity:.84;
-        filter:saturate(.92) contrast(1.03) brightness(.86);
+        filter:saturate(.82) contrast(1.1) brightness(.76) blur(.4px);
     }
 
     .mouth-image::after{
         background:
-            linear-gradient(90deg,rgba(5,3,2,.64),rgba(5,3,2,.16) 54%,rgba(5,3,2,.5)),
-            linear-gradient(0deg,rgba(5,3,2,.62),transparent 46%,rgba(5,3,2,.24));
+            radial-gradient(circle at 52% 22%,rgba(255,222,150,.08),transparent 8rem),
+            linear-gradient(90deg,rgba(5,3,2,.68),rgba(5,3,2,.18) 54%,rgba(5,3,2,.56)),
+            linear-gradient(0deg,rgba(5,3,2,.64),transparent 46%,rgba(5,3,2,.3));
     }
 
     .mouth-image img{
@@ -1066,15 +1109,69 @@ footer a{
         font-size:clamp(3rem,14.25vw,5.15rem);
     }
 
+    .mouth-timecode{
+        grid-column:4 / 7;
+        grid-row:12;
+        font-size:.54rem;
+        opacity:.34;
+    }
+
 }
 
 @keyframes mouth-candle-breathe{
     from{
-        opacity:.82;
+        opacity:.45;
     }
 
     to{
-        opacity:1;
+        opacity:.66;
+    }
+}
+
+@keyframes mouth-tape-drift{
+    0%{
+        transform:translate3d(0,0,0);
+        opacity:.28;
+    }
+
+    28%{
+        transform:translate3d(.14rem,-.08rem,0);
+        opacity:.36;
+    }
+
+    53%{
+        transform:translate3d(-.1rem,.12rem,0);
+        opacity:.31;
+    }
+
+    74%{
+        transform:translate3d(.08rem,.04rem,0);
+        opacity:.4;
+    }
+
+    100%{
+        transform:translate3d(0,0,0);
+        opacity:.32;
+    }
+}
+
+@keyframes mouth-timecode-waver{
+    0%,
+    38%,
+    42%,
+    100%{
+        opacity:.42;
+        transform:translateX(0);
+    }
+
+    39%{
+        opacity:.18;
+        transform:translateX(-1px);
+    }
+
+    41%{
+        opacity:.5;
+        transform:translateX(1px);
     }
 }
 
