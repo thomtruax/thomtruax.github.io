@@ -1006,6 +1006,7 @@ footer a{
 
 .mouth-nav,
 .mouth-header,
+.mouth-dialogue,
 .mouth-timecode{
     position:relative;
     z-index:4;
@@ -1055,6 +1056,41 @@ footer a{
     letter-spacing:-.045em;
     line-height:.78;
     text-transform:uppercase;
+}
+
+.mouth-dialogue{
+    grid-column:2 / 6;
+    grid-row:9 / 12;
+    align-self:start;
+    margin:0;
+}
+
+.mouth-dialogue blockquote{
+    margin:0;
+    color:rgba(239,228,207,.76);
+    font-size:clamp(.9rem,1.15vw,1.08rem);
+    font-style:italic;
+    font-weight:500;
+    letter-spacing:.035em;
+    line-height:1.45;
+}
+
+.mouth-dialogue span{
+    display:block;
+    opacity:0;
+    animation:mouth-dialogue-reveal .44s ease-out forwards;
+}
+
+.mouth-dialogue span:nth-child(1){
+    animation-delay:.8s;
+}
+
+.mouth-dialogue span:nth-child(2){
+    animation-delay:2.45s;
+}
+
+.mouth-dialogue span:nth-child(3){
+    animation-delay:4.1s;
 }
 
 .mouth-timecode{
@@ -1131,6 +1167,17 @@ footer a{
 
     .mouth-header h1{
         font-size:clamp(3rem,14.25vw,5.15rem);
+    }
+
+    .mouth-dialogue{
+        grid-column:1 / 6;
+        grid-row:9 / 11;
+        align-self:start;
+    }
+
+    .mouth-dialogue blockquote{
+        font-size:clamp(.86rem,3.6vw,1.02rem);
+        line-height:1.48;
     }
 
     .mouth-timecode{
@@ -1248,6 +1295,18 @@ footer a{
 
     54%{
         filter:brightness(1);
+    }
+}
+
+@keyframes mouth-dialogue-reveal{
+    from{
+        opacity:0;
+        transform:translateY(.18rem);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
     }
 }
 
@@ -2424,6 +2483,11 @@ footer a{
     *::after{
         transition:none !important;
         animation:none !important;
+    }
+
+    .mouth-dialogue span{
+        opacity:1;
+        transform:none;
     }
 
     .slay-nebula-energy,
