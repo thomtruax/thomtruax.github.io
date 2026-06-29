@@ -803,49 +803,67 @@ footer a{
 
 @media (max-width:760px){
     .mouth-page{
-        overflow:auto;
+        min-height:100svh;
+        overflow:hidden;
     }
 
     .mouth-canvas{
-        height:auto;
+        height:100svh;
         min-height:100svh;
-        display:block;
+        display:grid;
+        grid-template-columns:repeat(6,minmax(0,1fr));
+        grid-template-rows:repeat(12,minmax(0,1fr));
         padding:1.35rem;
     }
 
     .mouth-image{
-        position:relative;
-        width:100%;
-        height:42svh;
-        inset:auto;
-        margin:0 0 3rem;
-        opacity:.72;
+        position:fixed;
+        inset:0;
+        width:100vw;
+        height:100svh;
+        margin:0;
+        opacity:.84;
+        filter:saturate(.92) contrast(1.03) brightness(.86);
+    }
+
+    .mouth-image::after{
+        background:
+            linear-gradient(90deg,rgba(5,3,2,.64),rgba(5,3,2,.16) 54%,rgba(5,3,2,.5)),
+            linear-gradient(0deg,rgba(5,3,2,.62),transparent 46%,rgba(5,3,2,.24));
     }
 
     .mouth-image img{
-        object-position:center center;
+        object-position:52% center;
     }
 
     .mouth-nav{
-        margin-bottom:4.5rem;
+        grid-column:1 / 7;
+        grid-row:1;
+        margin-bottom:0;
     }
 
     .mouth-header{
-        margin-bottom:4rem;
+        grid-column:1 / 7;
+        grid-row:3 / 6;
+        align-self:end;
+        margin-bottom:0;
     }
 
     .mouth-header h1{
-        font-size:clamp(3.45rem,16vw,6rem);
+        font-size:clamp(3.4rem,16vw,5.8rem);
     }
 
     .mouth-quote{
-        margin-left:auto;
-        margin-bottom:4.5rem;
+        grid-column:2 / 7;
+        grid-row:9 / 11;
+        align-self:start;
+        justify-self:end;
         max-width:18rem;
+        margin:0;
     }
 
     .mouth-quote blockquote{
-        font-size:clamp(1.35rem,6.5vw,2.4rem);
+        font-size:clamp(1.25rem,6vw,2.2rem);
     }
 }
 
