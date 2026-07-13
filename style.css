@@ -136,6 +136,27 @@ body.fade-to-black::after{
     letter-spacing:.025em;
 }
 
+.project-status{
+    margin-top:.9rem;
+    color:var(--soft);
+    font-family:var(--sans);
+    font-size:.68rem;
+    font-weight:700;
+    letter-spacing:.14em;
+    line-height:1;
+    text-transform:uppercase;
+}
+
+.other-odyssey-page .project-medium{
+    font-family:var(--sans);
+    font-size:.68rem;
+    font-style:normal;
+    font-weight:700;
+    letter-spacing:.14em;
+    line-height:1;
+    text-transform:uppercase;
+}
+
 .project-intro{
     max-width:26rem;
 }
@@ -667,6 +688,21 @@ footer a{
     margin-bottom:1.7rem;
 }
 
+.home-page .current-development{
+    margin-top:2.45rem;
+}
+
+.home-page .development-label{
+    margin-bottom:.58rem;
+    color:var(--soft);
+    font-family:var(--sans);
+    font-size:.58rem;
+    font-weight:700;
+    letter-spacing:.14em;
+    line-height:1;
+    text-transform:uppercase;
+}
+
 .home-page .title{
     font-family:var(--serif);
     font-size:clamp(1.5rem,3vw,2.65rem);
@@ -907,6 +943,16 @@ footer a{
         margin-top:.38rem;
         font-size:.62rem;
         letter-spacing:.11em;
+    }
+
+    .home-page .current-development{
+        margin-top:2.1rem;
+    }
+
+    .home-page .development-label{
+        margin-bottom:.68rem;
+        font-size:.6rem;
+        letter-spacing:.12em;
     }
 
     .home-page .about{
