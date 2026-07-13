@@ -152,7 +152,7 @@ body.fade-to-black::after{
     min-height:100svh;
     overflow:hidden;
     background:
-        url("assets/other-odyssey-goddess-decay.png?v=3") center center / clamp(40rem,55vw,55rem) auto repeat,
+        url("assets/other-odyssey-goddess-decay.png?v=4") center center / clamp(40rem,55vw,55rem) auto repeat,
         #d8c5a6;
     color:#17130f;
 }
@@ -163,8 +163,8 @@ body.fade-to-black::after{
     inset:0;
     z-index:0;
     background:
-        linear-gradient(180deg,rgba(247,239,222,.78) 0%,rgba(247,239,222,.58) 24%,rgba(247,239,222,.12) 52%),
-        rgba(247,239,222,.08);
+        radial-gradient(ellipse 48% 20% at 50% 17%,rgba(250,246,236,.9) 0%,rgba(250,246,236,.68) 46%,rgba(250,246,236,.18) 78%,transparent 100%),
+        linear-gradient(180deg,rgba(247,239,222,.2),rgba(247,239,222,.04) 58%);
     pointer-events:none;
 }
 
