@@ -148,7 +148,57 @@ body.fade-to-black::after{
     text-transform:uppercase;
 }
 
+.other-odyssey-page{
+    min-height:100svh;
+    overflow:hidden;
+    background:
+        url("assets/other-odyssey-goddess-decay.png?v=3") center center / clamp(40rem,55vw,55rem) auto repeat,
+        #d8c5a6;
+    color:#17130f;
+}
+
+.other-odyssey-page::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    z-index:0;
+    background:
+        linear-gradient(180deg,rgba(247,239,222,.78) 0%,rgba(247,239,222,.58) 24%,rgba(247,239,222,.12) 52%),
+        rgba(247,239,222,.08);
+    pointer-events:none;
+}
+
+.other-odyssey-page .page{
+    position:relative;
+    z-index:1;
+    width:100%;
+    height:100svh;
+    margin:0;
+    padding:clamp(1.35rem,3.2vw,2.8rem) clamp(1.35rem,4vw,4rem);
+    display:grid;
+    grid-template-rows:1fr;
+}
+
+.other-odyssey-page .project-header{
+    width:min(92vw,60rem);
+    max-width:none;
+    align-self:start;
+    justify-self:center;
+    margin-top:clamp(2.4rem,7vh,5.25rem);
+    text-align:center;
+    text-shadow:0 1px 0 rgba(245,233,210,.72);
+}
+
+.other-odyssey-page .project-header h1{
+    font-size:clamp(2.55rem,6.6vw,6.4rem);
+    font-weight:500;
+    letter-spacing:.065em;
+    line-height:.88;
+}
+
 .other-odyssey-page .project-medium{
+    margin-bottom:.75rem;
+    color:#2d261e;
     font-family:var(--sans);
     font-size:.68rem;
     font-style:normal;
@@ -156,6 +206,34 @@ body.fade-to-black::after{
     letter-spacing:.14em;
     line-height:1;
     text-transform:uppercase;
+}
+
+.other-odyssey-page .project-status{
+    margin-top:1.15rem;
+    color:#2d261e;
+    font-size:.62rem;
+    letter-spacing:.18em;
+}
+
+@media (max-width:700px){
+    .other-odyssey-page{
+        background-size:40rem auto;
+        background-position:center center;
+    }
+
+    .other-odyssey-page .page{
+        padding:1.3rem;
+    }
+
+    .other-odyssey-page .project-header{
+        width:100%;
+        margin-top:4.4rem;
+    }
+
+    .other-odyssey-page .project-header h1{
+        font-size:clamp(2.55rem,14vw,4.1rem);
+        line-height:.86;
+    }
 }
 
 .project-intro{
