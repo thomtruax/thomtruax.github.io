@@ -949,8 +949,8 @@ footer a{
 
 .no-mercy-canvas::before{
     background:
-        linear-gradient(90deg,rgba(18,8,4,.91) 0%,rgba(31,14,6,.73) 28%,rgba(30,13,6,.17) 57%,rgba(14,6,3,.12) 100%),
-        linear-gradient(0deg,rgba(14,6,3,.76) 0%,transparent 34%,rgba(20,9,4,.22) 100%);
+        linear-gradient(90deg,rgba(31,13,5,.9) 0%,rgba(47,20,7,.68) 27%,rgba(35,14,4,.12) 55%,rgba(14,6,3,.08) 100%),
+        linear-gradient(0deg,rgba(20,8,3,.66) 0%,transparent 38%,rgba(35,14,4,.12) 100%);
 }
 
 .no-mercy-canvas::after{
@@ -975,7 +975,7 @@ footer a{
     display:block;
     object-fit:cover;
     object-position:center center;
-    filter:contrast(1.06) saturate(.83) sepia(.08);
+    filter:contrast(1.03) saturate(.88) sepia(.04);
 }
 
 .no-mercy-nav{
@@ -1021,10 +1021,12 @@ footer a{
 
 .no-mercy-title h1{
     margin:0 0 clamp(.85rem,1.6vw,1.5rem);
-    font-size:clamp(5.3rem,10.8vw,10.6rem);
+    font-family:var(--condensed);
+    font-size:clamp(4rem,7.8vw,7.8rem);
+    font-stretch:condensed;
     font-weight:600;
-    letter-spacing:-.08em;
-    line-height:.55;
+    letter-spacing:-.065em;
+    line-height:.57;
     text-transform:uppercase;
     text-shadow:.035em .04em 0 rgba(78,12,6,.78),0 .08em .3em rgba(0,0,0,.55);
 }
@@ -1034,18 +1036,23 @@ footer a{
 }
 
 .no-mercy-title h1 span:first-child{
-    margin:0 0 .12em .06em;
-    font-size:.47em;
-    font-style:italic;
-    font-weight:500;
-    letter-spacing:-.04em;
-    transform:rotate(-4deg);
-    transform-origin:left bottom;
+    margin-bottom:.08em;
 }
 
-.no-mercy-title h1 span:last-child{
-    font-family:var(--condensed);
-    font-stretch:condensed;
+.no-mercy-title h1 .no-mercy-of{
+    margin:.02em 0 -.03em .12em;
+    font-family:var(--serif);
+    font-size:.38em;
+    font-style:italic;
+    font-weight:500;
+    letter-spacing:-.02em;
+    line-height:1;
+    text-transform:lowercase;
+    transform:rotate(-5deg);
+    transform-origin:left center;
+}
+
+.no-mercy-title h1 span:not(.no-mercy-of){
     font-weight:900;
 }
 
@@ -1101,7 +1108,7 @@ footer a{
     }
 
     .no-mercy-image img{
-        object-position:68% center;
+        object-position:62% center;
     }
 
     .no-mercy-title{
@@ -1114,8 +1121,8 @@ footer a{
 
     .no-mercy-title h1{
         margin-bottom:1rem;
-        font-size:clamp(5.6rem,28vw,8rem);
-        line-height:.55;
+        font-size:clamp(4.25rem,21vw,6rem);
+        line-height:.58;
     }
 
     .no-mercy-status{
