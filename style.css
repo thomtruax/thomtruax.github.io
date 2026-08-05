@@ -1057,7 +1057,7 @@ footer a{
 }
 
 .no-mercy-genre{
-    margin:0 0 clamp(1.75rem,2.8vw,2.6rem);
+    margin:0 0 clamp(1.15rem,1.8vw,1.7rem);
     color:#d3b17a;
     font-family:var(--sans);
     font-size:clamp(.58rem,.72vw,.72rem);
@@ -1066,16 +1066,34 @@ footer a{
     text-transform:uppercase;
 }
 
+.no-mercy-warning{
+    width:min(100%,32rem);
+    margin:0 auto clamp(1rem,1.55vw,1.4rem);
+    color:#d3b17a;
+    font-family:var(--sans);
+    font-size:clamp(.6rem,.72vw,.74rem);
+    font-weight:800;
+    letter-spacing:.24em;
+    line-height:1.2;
+    text-align:center;
+    text-transform:uppercase;
+    opacity:0;
+    transform:translateY(.35rem);
+    animation:no-mercy-tagline-reveal 1.4s .55s ease forwards;
+}
+
 .no-mercy-logline{
     width:min(100%,32rem);
     margin:0 auto;
     color:#f8e9c9;
-    font-size:clamp(1.32rem,2.25vw,2.15rem);
+    font-size:clamp(1.42rem,2.4vw,2.3rem);
     font-style:italic;
     font-weight:600;
     letter-spacing:-.015em;
     line-height:1.14;
     text-align:center;
+    text-shadow:0 .12rem 1.2rem rgba(0,0,0,.9);
+    text-transform:uppercase;
 }
 
 .no-mercy-logline span{
@@ -1086,11 +1104,11 @@ footer a{
 }
 
 .no-mercy-logline span:first-child{
-    animation-delay:.75s;
+    animation-delay:1.75s;
 }
 
 .no-mercy-logline span:last-child{
-    animation-delay:2.05s;
+    animation-delay:3.05s;
 }
 
 .no-mercy-mark{
@@ -1147,8 +1165,13 @@ footer a{
     }
 
     .no-mercy-genre{
-        margin-bottom:1.15rem;
+        margin-bottom:.9rem;
         font-size:.56rem;
+    }
+
+    .no-mercy-warning{
+        margin-bottom:.85rem;
+        font-size:.58rem;
     }
 
     .no-mercy-logline{
@@ -3007,6 +3030,7 @@ footer a{
         transform:none;
     }
 
+    .no-mercy-warning,
     .no-mercy-logline span{
         opacity:1;
         transform:none;
