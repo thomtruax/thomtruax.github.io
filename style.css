@@ -19,7 +19,7 @@ STYLE.CSS
     --eggplant-cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cpath d='M21 8 C18 9 15 11 12 14 C6 20 5 29 10 34 C15 39 24 37 30 31 C34 27 36 23 35 18 C34 13 27 6 21 8 Z' fill='%235b2a86'/%3E%3Cpath d='M16 13 C10 18 8 27 12 31 C16 35 25 33 30 27 C32 25 33 22 33 20 C30 24 27 28 22 31 C17 34 13 33 11 30 C8 25 10 18 16 13 Z' fill='%238a4fc4' opacity='.95'/%3E%3Cpath d='M21 9 C22 5 25 3 29 4 C28 7 26 9 23 10 C26 9 30 9 34 12 C30 14 26 14 23 11 C24 14 23 17 20 20 C18 16 18 12 21 9 Z' fill='%23418a39'/%3E%3Cpath d='M25 4 C26 6 25 9 22 11' stroke='%23b5d74a' stroke-width='1.6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") 10 30;
     --moon-cursor:url("assets/moon-cursor.png") 32 32;
     --trireme-cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='38' height='26' viewBox='0 0 38 26'%3E%3Cg fill='%23050505'%3E%3Cpath d='M18 1h1.5v15H18z'/%3E%3Cpath d='M17 3 7 14h10zM20.5 4v10h9z'/%3E%3Cpath d='M3 16h31l-4 6H8z'/%3E%3Cpath d='m3 17-3 2 7 .5z'/%3E%3Cpath d='m10 20-6 5h2l6-5zm5 0-5 6h2l5-6zm5 0-3 6h2l3-6zm5 0-1 6h2l1-6zm5 0 2 5h2l-2-5z'/%3E%3C/g%3E%3C/svg%3E") 4 19;
-    --horse-cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='36' viewBox='0 0 56 36'%3E%3Cg fill='%23120b07' stroke='%23f3dfb5' stroke-width='1' stroke-linejoin='round'%3E%3Cpath d='M13 14C18 8 30 8 37 12L40 8 46 6 51 9 48 13 42 13 39 18C35 22 24 23 16 19Z'/%3E%3Cpath d='M15 15C10 10 6 12 2 7 5 15 8 18 15 19Z'/%3E%3Cpath d='m45 7 1-4 3 4m-7 2-1-4 4 2'/%3E%3Cpath d='m18 19-9 11H5l9-14zm7 3 5 12h4l-5-14zm10-3 12 8-2 3-13-8zm-18-2L6 22l-2-3 12-7z'/%3E%3C/g%3E%3Ccircle cx='47' cy='9.5' r='1' fill='%23d59642'/%3E%3Cpath d='M10 14C7 11 4 12 1 9' fill='none' stroke='%23120b07' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") 27 18;
+    --cowboy-hat-cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='26' viewBox='0 0 36 26'%3E%3Cg stroke='%23d6a15f' stroke-width='1.2' stroke-linejoin='round'%3E%3Cpath d='M9 15C10 11 11 6 14 3C16 4 20 4 22 3C25 6 26 11 27 15C23 18 13 18 9 15Z' fill='%23301d12'/%3E%3Cpath d='M10 13C14 15 22 15 26 13L27 16C22 18 14 18 9 16Z' fill='%23905b31'/%3E%3Cpath d='M2 16C8 18 12 17 18 16C24 17 28 18 34 16C33 22 27 24 18 23C9 24 3 22 2 16Z' fill='%2323160f'/%3E%3C/g%3E%3Cpath d='M13 7C15 8 21 8 23 7' fill='none' stroke='%23f1d2a0' stroke-width='.8' opacity='.65'/%3E%3C/svg%3E") 18 17;
 }
 
 *,
@@ -761,7 +761,7 @@ footer a{
 }
 
 .home-page .no-mercy-link{
-    cursor:var(--horse-cursor),pointer;
+    cursor:var(--cowboy-hat-cursor),pointer;
 }
 
 .home-page .other-odyssey-link{
