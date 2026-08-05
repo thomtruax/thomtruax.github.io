@@ -732,10 +732,10 @@ footer a{
 
 .home-page .projects{
     grid-column:1 / 7;
-    grid-row:5 / 11;
-    align-self:end;
+    grid-row:2 / 11;
+    align-self:start;
     transform:none;
-    padding-left:0;
+    padding:clamp(1.25rem,4vh,2.5rem) 0 0;
 }
 
 .home-page .projects a,
@@ -776,7 +776,7 @@ footer a{
 }
 
 .home-page .current-development{
-    margin-top:2.4rem;
+    margin-top:3.8rem;
 }
 
 .home-page .current-development > a{
@@ -887,8 +887,9 @@ footer a{
     }
 
     .home-page .projects{
-        grid-row:3 / 12;
-        align-self:center;
+        grid-row:2 / 12;
+        align-self:start;
+        padding-top:clamp(1rem,3vh,1.75rem);
     }
 
     .home-page .projects li{
@@ -896,7 +897,7 @@ footer a{
     }
 
     .home-page .current-development{
-        margin-top:clamp(1.2rem,3.4vh,1.75rem);
+        margin-top:clamp(2.15rem,5.2vh,2.8rem);
     }
 
     .home-page .current-development > a + a{
@@ -1368,7 +1369,7 @@ footer a{
 
     .home-page .projects{
         transform:none;
-        padding-left:0;
+        padding:0;
     }
 
     .title{
