@@ -153,7 +153,7 @@ body.fade-to-black::after{
     min-height:100svh;
     overflow:hidden;
     background:
-        url("assets/other-odyssey-hero-still.jpg") center center / cover no-repeat,
+        url("assets/other-odyssey-hero-still.jpg?v=2") center center / cover no-repeat,
         #bbb7a9;
     color:#17130f;
 }
@@ -216,9 +216,36 @@ body.fade-to-black::after{
     letter-spacing:.18em;
 }
 
+.other-odyssey-tagline{
+    position:absolute;
+    left:50%;
+    bottom:clamp(2rem,5vh,4.5rem);
+    width:min(88vw,36rem);
+    color:rgba(255,249,239,.92);
+    font-size:clamp(1.05rem,2vw,1.55rem);
+    font-style:italic;
+    font-weight:500;
+    letter-spacing:.035em;
+    line-height:1.2;
+    text-align:center;
+    text-shadow:0 1px 10px rgba(0,0,0,.9),0 1px 2px rgba(0,0,0,.9);
+    opacity:0;
+    filter:blur(3px);
+    transform:translate(-50%,.45rem);
+    animation:other-odyssey-tagline-arrive 2.8s cubic-bezier(.22,.61,.36,1) 1.15s forwards;
+}
+
+@keyframes other-odyssey-tagline-arrive{
+    to{
+        opacity:.94;
+        filter:blur(0);
+        transform:translate(-50%,0);
+    }
+}
+
 @media (max-width:700px){
     .other-odyssey-page{
-        background-position:82% center;
+        background-position:center center;
     }
 
     .other-odyssey-page .page{
@@ -233,6 +260,11 @@ body.fade-to-black::after{
     .other-odyssey-page .project-header h1{
         font-size:clamp(2.55rem,14vw,4.1rem);
         line-height:.86;
+    }
+
+    .other-odyssey-tagline{
+        bottom:2rem;
+        font-size:1.08rem;
     }
 }
 
@@ -3027,6 +3059,12 @@ footer a{
     .mouth-dialogue span{
         opacity:1;
         transform:none;
+    }
+
+    .other-odyssey-tagline{
+        opacity:.94;
+        filter:none;
+        transform:translate(-50%,0);
     }
 
     .no-mercy-warning,
