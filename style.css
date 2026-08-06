@@ -954,11 +954,11 @@ footer a{
     overflow:hidden;
     background:#1e1009;
     color:#f4e4c1;
-    cursor:crosshair;
+    cursor:var(--cowboy-hat-cursor),auto;
 }
 
 .no-mercy-page a{
-    cursor:crosshair;
+    cursor:var(--cowboy-hat-cursor),pointer;
 }
 
 .no-mercy-canvas{
