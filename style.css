@@ -1173,7 +1173,7 @@ footer a{
     }
 
     .no-mercy-image img{
-        object-position:66% center;
+        object-position:75% center;
     }
 
     .no-mercy-title{
@@ -1186,7 +1186,7 @@ footer a{
 
     .no-mercy-title h1{
         margin-bottom:1.25rem;
-        font-size:clamp(4.15rem,20vw,5.7rem);
+        font-size:clamp(3.5rem,17vw,5.7rem);
         line-height:.63;
     }
 
