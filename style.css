@@ -318,6 +318,31 @@ body.fade-to-black::after{
     height:auto;
 }
 
+.therapy-series-link{
+    display:inline-block;
+    margin-top:1rem;
+    color:var(--ink);
+    font-family:var(--sans);
+    font-size:.62rem;
+    font-weight:700;
+    letter-spacing:.13em;
+    text-decoration:none;
+    text-transform:uppercase;
+    opacity:.62;
+    transition:opacity .24s ease;
+}
+
+.therapy-series-link:focus-visible{
+    outline:1px solid var(--accent);
+    outline-offset:.24rem;
+}
+
+@media (hover:hover){
+    .therapy-series-link:hover{
+        opacity:.92;
+    }
+}
+
 .project-sorry-i-cant-talk{
     min-height:100svh;
     overflow:hidden;
