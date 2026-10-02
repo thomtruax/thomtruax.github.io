@@ -153,8 +153,8 @@ body.fade-to-black::after{
     min-height:100svh;
     overflow:hidden;
     background:
-        url("assets/other-odyssey-hero-still.jpg?v=2") center center / cover no-repeat,
-        #bbb7a9;
+        url("assets/other-odyssey-goddess-decay.png?v=5") center center / clamp(40rem,55vw,55rem) auto repeat,
+        #d8c5a6;
     color:#17130f;
 }
 
@@ -164,8 +164,8 @@ body.fade-to-black::after{
     inset:0;
     z-index:0;
     background:
-        radial-gradient(ellipse 49% 21% at 50% 17%,rgba(250,246,236,.94) 0%,rgba(250,246,236,.76) 48%,rgba(250,246,236,.22) 80%,transparent 100%),
-        linear-gradient(180deg,rgba(242,236,224,.16),rgba(12,14,12,.08) 58%,rgba(7,8,7,.18));
+        radial-gradient(ellipse 48% 20% at 50% 17%,rgba(250,246,236,.9) 0%,rgba(250,246,236,.68) 46%,rgba(250,246,236,.18) 78%,transparent 100%),
+        linear-gradient(180deg,rgba(247,239,222,.2),rgba(247,239,222,.04) 58%);
     pointer-events:none;
 }
 
@@ -245,6 +245,7 @@ body.fade-to-black::after{
 
 @media (max-width:700px){
     .other-odyssey-page{
+        background-size:40rem auto;
         background-position:center center;
     }
 
@@ -280,66 +281,220 @@ body.fade-to-black::after{
 
 /* Who's Afraid of Therapy? */
 
-.therapy-page-layout{
-    width:min(84vw,760px);
+.therapy-noir-page{
+    min-height:100svh;
+    overflow:hidden;
+    background:#050505;
+    color:#f2eee5;
 }
 
-.therapy-header{
-    max-width:38rem;
-    margin-bottom:clamp(2.4rem,6vw,4.2rem);
+.therapy-noir{
+    position:relative;
+    min-height:100svh;
+    overflow:hidden;
+    isolation:isolate;
+    background:#050505;
 }
 
-.therapy-header .project-medium{
-    margin:.8rem 0 0;
+.therapy-noir::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    z-index:-1;
+    background:
+        linear-gradient(90deg,rgba(2,2,2,.98) 0%,rgba(2,2,2,.92) 30%,rgba(2,2,2,.62) 50%,rgba(2,2,2,.16) 76%,rgba(2,2,2,.08) 100%),
+        linear-gradient(180deg,rgba(0,0,0,.24),transparent 48%,rgba(0,0,0,.42));
+    pointer-events:none;
 }
 
-.therapy-logline{
-    margin-top:1.9rem;
-    color:var(--ink);
-    font-size:1.18rem;
-    font-style:italic;
-    line-height:1.45;
-}
-
-.therapy-credit{
-    margin-top:.85rem;
-    color:#46413c;
-    font-size:.92rem;
-    line-height:1.84;
-}
-
-.therapy-hero{
+.therapy-noir-scene{
+    position:absolute;
+    inset:0;
+    z-index:-2;
     margin:0;
 }
 
-.therapy-hero img{
+.therapy-noir-scene img{
     display:block;
     width:100%;
-    height:auto;
+    height:100%;
+    object-fit:cover;
+    object-position:center center;
 }
 
-.therapy-series-link{
-    display:inline-block;
-    margin-top:1rem;
-    color:var(--ink);
+.therapy-noir-nav{
+    position:absolute;
+    top:clamp(1.3rem,3.2vw,2.65rem);
+    left:clamp(1.3rem,4vw,4rem);
+    right:clamp(1.3rem,4vw,4rem);
+    z-index:2;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
     font-family:var(--sans);
-    font-size:.62rem;
+    font-size:.6rem;
     font-weight:700;
-    letter-spacing:.13em;
-    text-decoration:none;
+    letter-spacing:.16em;
+    line-height:1;
     text-transform:uppercase;
-    opacity:.62;
+}
+
+.therapy-noir-nav a{
+    color:#f2eee5;
+    text-decoration:none;
+    opacity:.58;
     transition:opacity .24s ease;
 }
 
-.therapy-series-link:focus-visible{
-    outline:1px solid var(--accent);
-    outline-offset:.24rem;
+.therapy-noir-copy{
+    min-height:100svh;
+    width:min(52vw,43rem);
+    padding:clamp(5.8rem,11vh,8.5rem) 0 clamp(3rem,7vh,5.5rem) clamp(1.5rem,6vw,6.5rem);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:flex-start;
+}
+
+.therapy-noir-medium{
+    margin-bottom:1rem;
+    color:#b9232f;
+    font-family:var(--sans);
+    font-size:.62rem;
+    font-weight:800;
+    letter-spacing:.19em;
+    line-height:1;
+    text-transform:uppercase;
+}
+
+.therapy-noir-copy h1{
+    color:#f5f1e8;
+    font-size:clamp(3.3rem,6.9vw,7rem);
+    font-weight:500;
+    letter-spacing:-.045em;
+    line-height:.77;
+    text-transform:uppercase;
+    text-shadow:0 2px 22px rgba(0,0,0,.76);
+}
+
+.therapy-noir-copy h1 span{
+    display:block;
+}
+
+.therapy-noir-tagline{
+    margin-top:1.35rem;
+    color:rgba(242,238,229,.6);
+    font-size:1rem;
+    font-style:italic;
+    letter-spacing:.035em;
+}
+
+.therapy-noir-logline{
+    max-width:32rem;
+    margin-top:clamp(2.5rem,5.5vh,4rem);
+    color:#f5f1e8;
+    font-size:clamp(1.45rem,2.35vw,2.25rem);
+    font-weight:500;
+    letter-spacing:.005em;
+    line-height:1.12;
+    text-shadow:0 2px 16px rgba(0,0,0,.86);
+}
+
+.therapy-noir-logline em{
+    color:#d52a38;
+    font-style:italic;
+}
+
+.therapy-noir-credit{
+    margin-top:1.25rem;
+    color:rgba(242,238,229,.58);
+    font-family:var(--sans);
+    font-size:.62rem;
+    font-weight:600;
+    letter-spacing:.1em;
+    line-height:1.5;
+    text-transform:uppercase;
+}
+
+.therapy-noir-series-link{
+    display:inline-block;
+    margin-top:clamp(2.5rem,5.5vh,4rem);
+    padding-bottom:.42rem;
+    border-bottom:1px solid rgba(213,42,56,.72);
+    color:#f5f1e8;
+    font-family:var(--sans);
+    font-size:.64rem;
+    font-weight:800;
+    letter-spacing:.16em;
+    line-height:1;
+    text-decoration:none;
+    text-transform:uppercase;
+    transition:color .24s ease,border-color .24s ease;
+}
+
+.therapy-noir-nav a:focus-visible,
+.therapy-noir-series-link:focus-visible{
+    outline:1px solid #d52a38;
+    outline-offset:.3rem;
 }
 
 @media (hover:hover){
-    .therapy-series-link:hover{
-        opacity:.92;
+    .therapy-noir-nav a:hover{
+        opacity:1;
+    }
+
+    .therapy-noir-series-link:hover{
+        color:#d52a38;
+        border-color:#d52a38;
+    }
+}
+
+@media (max-width:800px){
+    .therapy-noir-page{
+        overflow:auto;
+    }
+
+    .therapy-noir{
+        min-height:100svh;
+        padding-bottom:min(66.666vw,68svh);
+    }
+
+    .therapy-noir::after{
+        background:linear-gradient(180deg,#050505 0%,#050505 54%,rgba(5,5,5,.88) 65%,rgba(5,5,5,.12) 82%,transparent 100%);
+    }
+
+    .therapy-noir-scene{
+        top:auto;
+        height:auto;
+    }
+
+    .therapy-noir-scene img{
+        width:100%;
+        height:auto;
+        object-fit:contain;
+    }
+
+    .therapy-noir-nav{
+        top:1.3rem;
+        left:1.3rem;
+        right:1.3rem;
+        font-size:.56rem;
+    }
+
+    .therapy-noir-copy{
+        min-height:auto;
+        width:100%;
+        padding:6.2rem 1.5rem 3.5rem;
+    }
+
+    .therapy-noir-copy h1{
+        font-size:clamp(3rem,14vw,5rem);
+        line-height:.8;
+    }
+
+    .therapy-noir-logline{
+        max-width:29rem;
+        font-size:clamp(1.4rem,6.5vw,2rem);
     }
 }
 
